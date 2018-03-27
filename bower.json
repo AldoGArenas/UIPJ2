@@ -1,0 +1,24 @@
+{
+  "name": "UIPJ2",
+  "description": "Sistema de Carpetas",
+  "main": "main.blade.php",
+  "authors": [
+    "ADFGE\\garenas <uncubus.agaa@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "bower"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "jquery": ">=1.7"
+  }
+}
