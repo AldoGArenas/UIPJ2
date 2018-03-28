@@ -2230,13 +2230,14 @@ a:focus {
   background-color: #e7e7e7;
 }
 .btn-primary {
-  background-color: #3c8dbc;
-  border-color: #367fa9;
+  background-color: #424242;
+  border-color: #1b1b1b;
+  box-shadow: #bdbdbd;
 }
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary.hover {
-  background-color: #367fa9;
+  background-color: #1b1b1b;
 }
 .btn-success {
   background-color: #00a65a;
@@ -3246,11 +3247,11 @@ table.text-center th {
 }
 .login-page,
 .register-page {
-  background: #d2d6de;
+  background: #424242;
 }
 .login-box,
 .register-box {
-  width: 360px;
+  width: 400px;
   margin: 7% auto;
 }
 @media (max-width: 768px) {
@@ -3280,6 +3281,8 @@ table.text-center th {
 .social-auth-links {
   margin: 10px 0;
 }
+
+
 /*
  * Page: 400 and 500 error pages
  * ------------------------------

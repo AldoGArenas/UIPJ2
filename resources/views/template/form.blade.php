@@ -1,4 +1,4 @@
-@extends('template.main')
+@extends('template.main2')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/tempusdominus-bootstrap-4.min.css') }}">

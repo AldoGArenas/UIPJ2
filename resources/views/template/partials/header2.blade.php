@@ -3,9 +3,9 @@
         {{-- Logo --}}
         <a  class="logo">
           {{-- mini logo for sidebar mini 50x50 pixels --}}
-          <span class="logo-mini"><img src="{{ asset('img/logofge.png') }}" alt="" style="height:30px"></span>
+          <span class="logo-mini"><img src="https://rawcdn.githack.com/Romaincks/assets/master/img/logo-150px-FGE.png" alt="" style="height:30px"></span>
           {{-- logo for regular state and mobile devices --}}
-          <span class="logo-lg"><img src="{{ asset('img/logofge2.png') }}" alt="" style="height:40px"></span>
+          <span class="logo-lg"><img src="https://rawcdn.githack.com/Romaincks/assets/master/img/logo-nooficial-fge.png" alt="" style="height:40px"></span>
         </a>
     
         {{-- Header Navbar --}}
@@ -114,13 +114,14 @@
                 </ul>
               </li>
               {{-- User Account Menu --}}
+              @auth
               <li class="dropdown user user-menu">
                 {{-- Menu Toggle Button --}}
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   {{-- The user image in the navbar--}}
                   <img src="{{asset('bower_components/admin-lte/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
                   {{-- hidden-xs hides the username on small devices so only the image appears. --}}
-                  <span class="hidden-xs">Alexander Pierce</span>
+                  <span class="hidden-xs">{{ Auth::user()->nombres}}</span>
                 </a>
                 <ul class="dropdown-menu">
                   {{-- The user image in the menu --}}
@@ -153,16 +154,23 @@
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();" class="btn btn-default btn-flat">Cerrar sesión</a>
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                          {{ csrf_field() }}
+                      </form>
                     </div>
                   </li>
                 </ul>
               </li>
+              @endauth
               {{-- Control Sidebar Toggle Button --}}
               <li>
                 <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+               
               </li>
             </ul>
           </div>
         </nav>
       </header>
+      @include ('template.partials.asideder')

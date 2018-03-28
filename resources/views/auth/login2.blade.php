@@ -13,7 +13,7 @@
   {{-- Ionicons --}}
   <link rel="stylesheet" type="text/css" href="{{asset ('bower_components/Ionicons/css/ionicons.min.css')}}">
   {{-- Theme style --}}
-  <link rel="stylesheet" type="text/css"  href="{{asset ('bower_components/admin-lte/dist/css/AdminLTE.min.css')}}">
+  <link rel="stylesheet" type="text/css"  href="{{asset ('bower_components/admin-lte/dist/css/AdminLTE.css')}}">
   {{-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect.--}}
@@ -42,26 +42,30 @@
   <div class="login-box-body">
     <p class="login-box-msg">Ingresa tus datos para iniciar sesión</p>
 
-    <form action="../../index2.html" method="post">
-      <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Correo electrónico">
+    <form  method="POST"action="{{ route('login') }}">
+      {{csrf_field()}}
+      <div class="form-group has-feedback row{{ $errors->has('email') ? ' has-error' : '' }}">
+        <input id="email" type="email" class="form-control" placeholder="Correo electrónico "name ="email" value="{{ old('email') }}">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          @if ($errors->has('email'))
+          <span class="help-block">
+              <strong>{{ $errors->first('email') }}</strong>
+          </span>
+           @endif
       </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Contraseña">
+      <div class="form-group has-feedback row{{ $errors->has('password') ? ' has-error' : '' }}" >
+        <input id="password" type="password" name="password" class="form-control" placeholder="Contraseña">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox icheck">
-            <label>
-              <input type="checkbox"> Recordarme
-            </label>
-          </div>
+            @if ($errors->has('password'))
+               <span class="help-block">
+                 <strong>{{ $errors->first('password') }}</strong>
+               </span>
+            @endif
         </div>
+      <div class="row">
         {{-- /.col --}}
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Inicia</button>
+        <div class="col-md-4 col-md-offset-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat ">Inicia</button>
         </div>
         {{-- /.col --}}
       </div>
@@ -77,7 +81,7 @@
     {{-- /.social-auth-links --}}
 
     {{--<a href="#">I forgot my password</a><br>--}}
-    <a href="register.html" class="text-center">Registrarse</a>
+    
 
   </div>
   {{-- /.login-box-body --}}

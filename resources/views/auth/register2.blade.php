@@ -41,16 +41,19 @@
   <div class="register-box-body">
     <p class="login-box-msg">Formulario de Registro</p>
 
-    <form action="" method="post">
-      <div class="form-group has-feedback">
+    <form  method="POST" action="{{ route('register') }}">
+      <div class="form-group has-feedback row{{ $errors->has('idUnidad') ? ' has-error' : '' }}">
         {!! Form::label('idUnidad', 'Unidad', ['class' => 'col-md-12 col-form-label text-center ']) !!}
-        <input id="idUnidad" type="text" class="form-control" placeholder="Proximo select de unidad">
-        {{--{!! Form::select('idUnidad', '$list', '$selected', ['class' => 'form-control ']) !!} --}}
-        <span class="glyphicon glyphicon-bookmark form-control-feedback"></span>
+        {!! Form::select('idUnidad', $unidades, null, ['class' => 'form-control select2', 'required']) !!}
+           @if ($errors->has('idUnidad'))
+              <span class="help-block">
+                 <strong>{{ $errors->first('idUnidad') }}</strong>
+              </span>
+           @endif
       </div>
-      <div class="form-group has-feedback">
+      <div class="form-group has-feedback row{{ $errors->has('nombres') ? ' has-error' : '' }}">
         {!! Form::label('nombres', 'Nombre', ['class' => 'col-md-12 col-form-label text-center ']) !!}
-        <input id="nombres" type="text" class="form-control" placeholder="">
+        <input id="nombres" type="text" class="form-control" placeholder="" value="{{ old('nombres') }}" required autofocus>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">

@@ -14,19 +14,20 @@
 Auth::routes();
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('auth.login2');
 })->middleware('guest');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('admin', function () {
     return view('admin_lte');
 });
-Route::get('login', function () {
+Route::get('main2', function () {
+    return view('template.main2');
+});
+/*Route::get('login', function () {
     return view('auth.login2');
-});
-Route::get('register', function () {
-    return view('auth.register2');
-});
+})*/;
+//Route::get('register2', 'auth\RegisterController@showRegistrationForm');
 
 //Protección de rutas
 Route::middleware(['auth'])->group(function () {
