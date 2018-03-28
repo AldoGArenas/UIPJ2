@@ -1,7 +1,7 @@
 <header class="main-header">
 
         {{-- Logo --}}
-        <a  class="logo">
+        <a  class="logo" href="{{ url('/home') }}">
           {{-- mini logo for sidebar mini 50x50 pixels --}}
           <span class="logo-mini"><img src="https://rawcdn.githack.com/Romaincks/assets/master/img/logo-150px-FGE.png" alt="" style="height:30px"></span>
           {{-- logo for regular state and mobile devices --}}
@@ -129,12 +129,12 @@
                     <img src="{{asset('bower_components/admin-lte/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
     
                     <p>
-                      Alexander Pierce - Web Developer
-                      <small>Member since Nov. 2012</small>
+                        {{ Auth::user()->nombres." ".Auth::user()->primerAp." ".Auth::user()->segundoAp }}
+                      <small>Numero de Fiscal: <b>{{ Auth::user()->numFiscal}}</b> </small>
                     </p>
                   </li>
                   {{-- Menu Body --}}
-                  <li class="user-body">
+                  {{--<li class="user-body">
                     <div class="row">
                       <div class="col-xs-4 text-center">
                         <a href="#">Followers</a>
@@ -147,13 +147,10 @@
                       </div>
                     </div>
                     {{-- /.row --}}
-                  </li>
+                  {{--</li>--}}
                   {{-- Menu Footer--}}
                   <li class="user-footer">
-                    <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
-                    </div>
-                    <div class="pull-right">
+                     <div class="pull-right">
                       <a href="{{ route('logout') }}" onclick="event.preventDefault();
                       document.getElementById('logout-form').submit();" class="btn btn-default btn-flat">Cerrar sesión</a>
                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

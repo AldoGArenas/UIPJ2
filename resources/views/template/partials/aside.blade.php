@@ -32,7 +32,7 @@
           {{-- Sidebar Menu --}}
           <ul class="sidebar-menu" data-widget="tree">
             @auth
-            <li class="header">CABECERA</li>
+            <li class="header">CONTENIDO</li>
             {{-- Optionally, you can add icons to the links --}}
             <li class="active"><a href="{{ url('/home') }}"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
             <li><a href="{{ route('libro.gobierno') }}"><i class="fa fa-book"></i> <span>Libro de gobierno</span></a></li>

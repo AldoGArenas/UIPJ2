@@ -14,13 +14,14 @@
   {{-- Ionicons --}}
   <link rel="stylesheet" type="text/css" href="{{asset ('bower_components/Ionicons/css/ionicons.min.css')}}">
   {{-- Theme style --}}
-  <link rel="stylesheet" type="text/css"  href="{{asset ('bower_components/admin-lte/dist/css/AdminLTE.min.css')}}">
+  <link rel="stylesheet" type="text/css"  href="{{asset ('bower_components/admin-lte/dist/css/AdminLTE.css')}}">
   {{-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect.--}}
   <link rel="stylesheet" type="text/css" href="{{asset ('bower_components/admin-lte/dist/css/skins/skin-blue.min.css')}}">
   <link rel="stylesheet" href="{{asset ('css/sweetalert.css')}}">
   <link rel="stylesheet" type="text/css" href="{{ asset('plugins/select2/select2.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
   <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
   <link rel="stylesheet" href="{{ asset('css/cssfonts.css') }}">
   <link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
@@ -56,7 +57,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 --}}
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition   sidebar-mini">
     <div class="wrapper">
         {{-- Main Header --}}
         @include('template.partials.header2')
