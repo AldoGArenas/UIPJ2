@@ -85,8 +85,10 @@
 			</div>
 		</div>
 	</div>
+	
 	@include('forms.buttons')
 	{!! Form::close() !!}
+		
 	<div class="box-body">
 		@include('tables.denunciantes')
 	</div>

@@ -24,7 +24,7 @@
 <div class="row ">
     <div class="col-md-12">
         <div class="card ">
-            {{--<div class="card-header">@yield('title')</div>--}}
+            <div class="card-header"> @yield ('botones')</div>
             <div class="">
                 @yield('contenido')
             </div>

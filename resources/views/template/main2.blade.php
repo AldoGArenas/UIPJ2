@@ -69,7 +69,7 @@ desired effect
                 @include ('template.partials.headercontainer')--}}
                 @yield ('cabinterna')
                           
-            <section class="content ">
+            <section class="content container-fluid">
                 {{--Contenido de la pagina--}}
                     @yield('content')
             </section>

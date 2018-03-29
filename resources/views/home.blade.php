@@ -1,5 +1,4 @@
 @extends('template.main2')
-@
 @section ('cabinterna')
 <div class="row ">
         <section class="content-header">
