@@ -37,7 +37,8 @@
 		<div class="form-group" align="center">
 			<div class="row">
 				<div class="col-md-5" align="center">
-				<div class="form-group" >
+				<div class="form-group" 
+					<div class="form-group ">
 						{!! Form::label('fechaIni', 'De Fecha:', ['class' => 'col-form-label-sm']) !!}
 						<div  class="input-group date" id="fechaLibroIni" data-target-input="nearest">
 							{!! Form::text('fechaIni', null, ['class' => 'form-control form-control-sm datetimepicker-input', 'data-target' => '#fechaLibroIni', 'data-toggle' => 'datetimepicker', 'required', 'placeholder' => 'DD/MM/AAAA']) !!}
