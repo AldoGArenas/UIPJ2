@@ -6,7 +6,7 @@
 	@include('forms.errores')
     {!! Form::open(['route' => 'store.denunciante', 'method' => 'POST'])  !!}
     {{ csrf_field() }}
-    <div class="boxtwo">
+    <div class="box-body">
     	<div class="row">
     		@include('fields.tipo-persona')
     	</div>
@@ -20,7 +20,7 @@
 			</h5>
 		</div>
 		<div id="collapsePersonales1" class="collapse show boxcollapse">
-			<div class="boxtwo">
+			<div class="box-body">
 				@include('fields.personales')
 			</div>
 		</div>

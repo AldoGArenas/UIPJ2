@@ -66,9 +66,10 @@ desired effect
         {{-- Content Wrapper. Contains page content --}}
         <div class="content-wrapper">
              {{-- Content Header (Page header) 
-                @include ('template.partials.headercontainer')
-              --}}  
-            <section class="content container-fluid">
+                @include ('template.partials.headercontainer')--}}
+                @yield ('cabinterna')
+                          
+            <section class="content ">
                 {{--Contenido de la pagina--}}
                     @yield('content')
             </section>

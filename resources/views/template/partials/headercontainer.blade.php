@@ -1,7 +1,10 @@
+
 {{-- Content Header (Page header) --}}
+
+<div class="row">
 <section class="content-header">
         <h1>
-          Page Header
+          @yield('tittle')
           <small>Optional description</small>
         </h1>
         <ol class="breadcrumb">
