@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-4">
+	<div class="col-md-4">
 		@if(!empty($idCarpeta))
 		{!! Form::hidden('idCarpeta', $idCarpeta) !!}
 		@endif
@@ -13,7 +13,7 @@
 			</select>
 		</div>
 	</div>
-	<div class="col-4">
+	<div class="col-md-4">
 		<div class="form-group">
 			{!! Form::label('idTipifDelito', 'Delito', ['class' => 'col-form-label-sm']) !!}
 			<select name="idTipifDelito" id="idTipifDelito" class="form-control form-control-sm" required>
@@ -24,7 +24,7 @@
 			</select>
 		</div>
 	</div>
-	<div class="col-4">
+	<div class="col-md-4">
 		<div class="form-group">
 			{!! Form::label('idDenuciado', 'Denunciado', ['class' => 'col-form-label-sm']) !!}
 			<select name="idDenunciado" id="idDenuncidoe" class="form-control form-control-sm" required>

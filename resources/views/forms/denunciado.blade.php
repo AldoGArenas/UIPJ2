@@ -6,7 +6,7 @@
 	@include('forms.errores')
     {!! Form::open(['route' => 'store.denunciado', 'method' => 'POST'])  !!}
     {{ csrf_field() }}
-	<div class="boxtwo">
+	<div class="box-body">
 		<div class="row">
 			<div class="col-6">
 				<div class="form-group">
@@ -38,7 +38,7 @@
 	</div>
 
 	<div id="qrr">
-		<div class="boxtwo">
+		<div class="box-body">
 			<div class="row">
 				<div class="col-12">
 					<div class="form-group">
@@ -51,7 +51,7 @@
 	</div>
 
 	<div id="conocido">
-		<div class="boxtwo">
+		<div class="box-body">
 			@include('fields.det-conocido')
 		</div>
 	</div>
@@ -66,7 +66,7 @@
 				</h5>
 			</div>
 			<div id="collapsePersonales2" class="collapse show boxcollapse">
-				<div class="boxtwo">
+				<div class="box-body">
 					@include('fields.personales')
 				</div>
 			</div>
@@ -81,7 +81,7 @@
 				</h5>
 			</div>
 			<div id="collapseDir2" class="collapse boxcollapse">
-				<div class="boxtwo">
+				<div class="box-body">
 					@include('fields.direcciones')
 				</div>
 			</div>
@@ -96,7 +96,7 @@
 				</h5>
 			</div>
 			<div id="collapseTrab2" class="collapse boxcollapse">
-				<div class="boxtwo">
+				<div class="box-body">
 					@include('fields.lugartrabajo')
 				</div>
 			</div>
@@ -111,7 +111,7 @@
 				</h5>
 			</div>
 			<div id="collapseNotifs2" class="collapse boxcollapse">
-				<div class="boxtwo">
+				<div class="box-body">
 					@include('fields.notificaciones')
 				</div>
 			</div>
@@ -126,7 +126,7 @@
 				</h5>
 			</div>
 			<div id="collapseDenun2" class="collapse boxcollapse">
-				<div class="boxtwo">
+				<div class="box-body">
 					@include('fields.extra-denunciado')
 				</div>
 			</div>
@@ -135,7 +135,7 @@
 
 	@include('forms.buttons')
 	{!! Form::close() !!}
-	<div class="boxtwo">
+	<div class="box-body">
 		@include('tables.denunciados')
 	</div>
 

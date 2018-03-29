@@ -14,7 +14,7 @@
 			</h5>
 		</div>
 		<div id="collapsePersonales3" class="collapse show boxcollapse">
-			<div class="boxtwo">
+			<div class="box-body">
 				@include('fields.personales-aut')
 			</div>
 		</div>
@@ -29,7 +29,7 @@
 			</h5>
 		</div>
 		<div id="collapseDir3" class="collapse boxcollapse">
-			<div class="boxtwo">
+			<div class="box-body">
 				@include('fields.direcciones')
 			</div>
 		</div>
@@ -44,7 +44,7 @@
 			</h5>
 		</div>
 		<div id="collapseTrab3" class="collapse boxcollapse">
-			<div class="boxtwo">
+			<div class="box-body">
 				@include('fields.lugartrabajo')
 			</div>
 		</div>
@@ -59,14 +59,14 @@
 			</h5>
 		</div>
 		<div id="collapseAutoridad" class="collapse boxcollapse">
-			<div class="boxtwo">
+			<div class="box-body">
 				@include('fields.extra-aut')
 			</div>
 		</div>
 	</div>
 	@include('forms.buttons')
 	{!! Form::close() !!}
-	<div class="boxtwo">
+	<div class="box-body">
 		@include('tables.autoridades')
 	</div>
 @endsection

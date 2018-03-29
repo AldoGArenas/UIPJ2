@@ -42,7 +42,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-4">
+	<div class="col-md-4">
 		<p class="col-form-label-sm">¿Con violencia?</p>
 		<div class="form-group">
 			<div class="form-check form-check-inline">
@@ -61,19 +61,19 @@
 	</div>
 	<div class="col-8">
 		<div class="row" id="violencia">
-			<div class="col-4">
+			<div class="col-md-4">
 				<div class="form-group">
 					{!! Form::label('idTipoArma', 'Tipo de Arma', ['class' => 'col-form-label-sm']) !!}
 					{!! Form::select('idTipoArma', $tiposarma, null, ['class' => 'form-control form-control-sm cv', 'placeholder' => 'Seleccione un tipo de arma', 'required']) !!}
 				</div>
 			</div>
-			<div class="col-4">
+			<div class="col-md-4">
 				<div class="form-group">
 					{!! Form::label('idArma', 'Arma', ['class' => 'col-form-label-sm']) !!}
 					{!! Form::select('idArma', ['' => 'Seleccione el arma'], null, ['class' => 'form-control form-control-sm cv', 'required']) !!}
 				</div>
 			</div>
-			<div class="col-4">
+			<div class="col-md-4">
 				<div class="form-group">
 					{!! Form::label('idPosibleCausa', 'Posible causa', ['class' => 'col-form-label-sm']) !!}
 					{!! Form::select('idPosibleCausa', $posiblescausas, null, ['class' => 'form-control form-control-sm cv', 'placeholder' => 'Seleccione una posible causa', 'required']) !!}
@@ -81,19 +81,19 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-4">
+	<div class="col-md-4">
 		<div class="form-group">
 			{!! Form::label('idModalidad', 'Modalidad', ['class' => 'col-form-label-sm']) !!}
 			{!! Form::select('idModalidad', $modalidades, null, ['class' => 'form-control form-control-sm', 'placeholder' => 'Seleccione una modalidad', 'required']) !!}
 		</div>
 	</div>
-	<div class="col-4">
+	<div class="col-md-4">
 		<div class="form-group">
 			{!! Form::label('formaComision', 'Forma de comisión', ['class' => 'col-form-label-sm']) !!}
 			{!! Form::select('formaComision', ['CULPOSO' => 'CULPOSO', 'DOLOSO' => 'DOLOSO'], null, ['class' => 'form-control form-control-sm', 'placeholder' => 'Seleccione una forma de comisión', 'required']) !!}
 		</div>
 	</div>
-	<div class="col-4">
+	<div class="col-md-4">
 		<div class="form-group">
 			{!! Form::label('consumacion', 'Consumación', ['class' => 'col-form-label-sm']) !!}
 			{!! Form::select('consumacion', ['INSTANTÁNEA' => 'INSTANTÁNEA', 'PERMANENTE' => 'PERMANENTE'], null, ['class' => 'form-control form-control-sm', 'placeholder' => 'Seleccione una forma de consumación', 'required']) !!}

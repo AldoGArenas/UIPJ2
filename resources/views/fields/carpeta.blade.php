@@ -47,9 +47,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-12" id="conDet1">
+	<div class="col-md-12" id="conDet1">
 		<div class="row">
-			<div class="col-3">
+			<div class="col-md-3">
 				<div class="form-group">
 					{!! Form::label('horaIntervencion', 'Hora de intervención', ['class' => 'col-form-label-sm']) !!}
 					<div class="input-group date" id="horaInter" data-target-input="nearest">
@@ -94,7 +94,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-12">
+	<div class="col-md-12">
 		<div class="form-group">
 			{!! Form::label('descripcionHechos', 'Descripción de los hechos', ['class' => 'col-form-label-sm']) !!}
 			{!! Form::textarea('descripcionHechos', null, ['class' => 'form-control form-control-sm', 'placeholder' => 'Ingrese la descripción de los hechos','rows' => '3','data-validation'=>'length', 'data-validation-length'=>'5-500', 'required']) !!}
@@ -103,7 +103,7 @@
 	</div>
 	{{--
 	Los campos de abajo probablemente no se mostrarán
-	<div class="col-4">
+	<div class="col-md-4">
 		<div class="form-group">
 			{!! Form::label('fechaDeterminacion', 'Fecha determinación', ['class' => 'col-form-label-sm']) !!}
 			<div class="input-group date" id="fechadet" data-target-input="nearest">
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-4">
+	<div class="col-md-4">
 		<div class="form-group">
 			{!! Form::label('idTipoDeterminacion', 'Tipo determinación', ['class' => 'col-form-label-sm']) !!}
 			{!! Form::select('idTipoDeterminacion', $tiposdet, null, ['class' => 'form-control form-control-sm chosen-select', 'placeholder' => 'Seleccione un tipo de determinación', 'readonly', 'required']) !!}

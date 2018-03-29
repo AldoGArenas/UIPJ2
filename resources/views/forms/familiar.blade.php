@@ -8,7 +8,7 @@
     {{ csrf_field() }}
 	<div class="row no-gutters">
 		<div class="col-12">
-			<div class="boxtwo">
+			<div class="box-body">
 				<h6>Datos del familiar (Denunciante/Denunciado)</h6>
 				@include('fields.familiar')
 			</div>
@@ -16,7 +16,7 @@
 	</div>
 	@include('forms.buttons')
 	{!! Form::close() !!}
-	<div class="boxtwo">
+	<div class="box-body">
 		@include('tables.familiares')
 	</div>
 @endsection

@@ -4,7 +4,7 @@
 <div class="row">
 <section class="content-header">
         <h1>
-          @yield('tittle')
+          @yield('title')
           <small>Optional description</small>
         </h1>
         <ol class="breadcrumb">

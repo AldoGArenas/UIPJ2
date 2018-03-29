@@ -20,7 +20,7 @@
 </div>
 @include('fields.dir-conocido')
 <div class="row">
-	<div class="col-12">
+	<div class="col-md-12">
 		<div class="form-group">
 			{!! Form::label('senasParticC', 'Señas particulares', ['class' => 'col-form-label-sm']) !!}
 			{!! Form::textarea('senasParticC',"SIN INFORMACION", ['class' => 'form-control form-control-sm', 'placeholder' => 'Ingrese las señas particulares','rows' => '3','data-validation'=>'length', 'data-validation-length'=>'1-500']) !!}

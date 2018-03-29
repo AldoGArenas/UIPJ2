@@ -1,5 +1,5 @@
 @include('forms.idCarpeta')
-<div class="boxtwo">
+<div class="box-body">
 	<div class="row">
 		<div class="col">
 			<div class="text-left">

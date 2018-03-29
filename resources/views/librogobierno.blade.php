@@ -20,7 +20,7 @@
 		{!! Form::open() !!}
 		<div class="form-group" align="center">
 			<div class="row">
-				<div class="col-5" align="center">
+				<div class="col-md-5" align="center">
 					<div class="form-group">
 						{!! Form::label('fechaIni', 'De Fecha:', ['class' => 'col-form-label-sm']) !!}
 						<div class="input-group date" id="fechaLibroIni" data-target-input="nearest">
@@ -32,7 +32,7 @@
 					</div>
 				</div>
 
-				<div class="col-5" align="center" >
+				<div class="col-md-5" align="center" >
 					<div class="form-group">
 						{!! Form::label('fechaFin', 'A Fecha:', ['class' => 'col-form-label-sm']) !!}
 						<div class="input-group date" id="fechaLibroFin" data-target-input="nearest">
@@ -44,7 +44,7 @@
 					</div>
 				</div>
 
-				<div class="col-2">
+				<div class="col-md-2">
 					<div class="form-group">
 						<br>
 						<button type="button" class="btn btn-dark" id="consultar">Consultar</button>

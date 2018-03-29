@@ -35,7 +35,7 @@
 			</h5>
 		</div>
 		<div id="collapseDir1" class="collapse boxcollapse">
-			<div class="boxtwo">
+			<div class="box-body">
 				@include('fields.direcciones')
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 			</h5>
 		</div>
 		<div id="collapseTrab1" class="collapse boxcollapse">
-			<div class="boxtwo">
+			<div class="box-body">
 				@include('fields.lugartrabajo')
 			</div>
 		</div>
@@ -65,7 +65,7 @@
 			</h5>
 		</div>
 		<div id="collapseNotifs1" class="collapse boxcollapse">
-			<div class="boxtwo">
+			<div class="box-body">
 				@include('fields.notificaciones')
 			</div>
 		</div>
@@ -80,14 +80,14 @@
 			</h5>
 		</div>
 		<div id="collapseDenun" class="collapse boxcollapse">
-			<div class="boxtwo">
+			<div class="box-body">
 				@include('fields.extra-denunciante')
 			</div>
 		</div>
 	</div>
 	@include('forms.buttons')
 	{!! Form::close() !!}
-	<div class="boxtwo">
+	<div class="box-body">
 		@include('tables.denunciantes')
 	</div>
 @endsection

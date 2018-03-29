@@ -6,7 +6,7 @@
     {{ csrf_field() }}
 	<div class="row no-gutters">
 		<div class="col-12">
-			<div class="boxtwo">
+			<div class="box-body">
 				<h6>Acusaciones</h6>
 				<div class="table">
 				    <table class="table table-striped">
@@ -38,7 +38,7 @@
 				</div>
 			</div>
 
-			<div class="boxtwo barras">
+			<div class="box-body barras">
 				<div class="form-group">
 					@foreach($servicios as $servicio)
 						<div class="form-check">
@@ -50,7 +50,7 @@
 				</div>
 			</div>
 			@include('forms.idcarpeta')
-			<div class="boxtwo">
+			<div class="box-body">
 				<div class="row">
 					<div class="col">
 						<div class="text-left">

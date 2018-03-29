@@ -6,14 +6,14 @@
     {{ csrf_field() }}
 	<div class="row no-gutters">
 		<div class="col-12">
-			<div class="boxtwo">
+			<div class="box-body">
 				@include('fields.acusacion')
 			</div>
 		</div>
 	</div>
 	@include('forms.buttons')
 	{!! Form::close() !!}
-	<div class="boxtwo">
+	<div class="box-body">
 		@include('tables.acusaciones')
 	</div>
 @endsection

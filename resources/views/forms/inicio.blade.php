@@ -6,11 +6,11 @@
 	@include('forms.errores')
     {!! Form::open(['route' => 'store.carpeta', 'method' => 'POST'])  !!}
     {{ csrf_field() }}
-	<div class="boxtwo">
+	<div class="box-body">
 		<h6>Datos generales de la carpeta de investigación</h6>
 		@include('fields.carpeta')
 	</div>
-	<div class="boxtwo">
+	<div class="box-body">
 		<div class="row">
 			<div class="col">
 				<div class="text-left">
