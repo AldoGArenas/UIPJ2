@@ -9,14 +9,14 @@
         <div class="card">
             <div class="card-header">Carpeta de Investigación: {{ $carpetaNueva[0]->numCarpeta }}</div>
             <div class="card-body boxone">
-                <div class="boxtwo">
+                <div class="box-body">
                     @include('tables.denunciantes')
                     <div class="text-right"> 
                         <a href="{{ route('new.denunciante', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Agregar persona</a><hr>
                     </div>
                 </div>
 
-                <div class="boxtwo">
+                <div class="box-body">
                     @include('tables.denunciados')
                     <div class="text-right"> 
                         <a href="{{ route('new.denunciado', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Agregar persona</a><hr>
@@ -24,7 +24,7 @@
                 </div>
                 
                 @if(($carpetaNueva[0]->conDetenido)==1)
-                <div class="boxtwo">
+                <div class="box-body">
                     @include('tables.autoridades')
                     <div class="text-right"> 
                         <a href="{{ route('new.autoridad', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Agregar Autoridad</a><hr>
@@ -33,7 +33,7 @@
                 @endif
               
 
-                <div class="boxtwo">
+                <div class="box-body">
                     @include('tables.abogados')
                     <div class="text-right"> 
                         <a href="{{ route('new.abogado', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Agregar persona</a><hr>
@@ -41,7 +41,7 @@
                 </div>
 
                @if((count($denunciantes)>0 || count($denunciados)>0) && count($abogados)>0)
-                <div class="boxtwo">
+                <div class="box-body">
                     @include('tables.defensas')
                     <div class="text-right"> 
                         <a href="{{ route('new.defensa', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Asignar defensa</a><hr>
@@ -50,7 +50,7 @@
                 @endif
 
                 @if(count($denunciantes)>0 || count($denunciados)>0)
-                <div class="boxtwo">
+                <div class="box-body">
                     @include('tables.familiares')
                     <div class="text-right"> 
                         <a href="{{ route('new.familiar', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Agregar persona</a><hr>
@@ -58,7 +58,7 @@
                 </div>
                 @endif
 
-                <div class="boxtwo">
+                <div class="box-body">
                     @include('tables.delitos')
                     <div class="text-right"> 
                         <a href="{{ route('new.delito', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Agregar delito</a><hr>
@@ -66,7 +66,7 @@
                 </div>
 
                 @if(count($delitos)>0 && count($denunciantes)>0 && count($denunciados)>0)
-                <div class="boxtwo">
+                <div class="box-body">
                     @include('tables.acusaciones')
                     <div class="text-right">
                         @if(count($acusaciones)>0)
@@ -78,7 +78,7 @@
                 </div>
                 @endif
 
-                <div class="boxtwo">
+                <div class="box-body">
                     @include('tables.vehiculos')
                     <div class="text-right"> 
                         <a href="{{ route('new.vehiculo', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Agregar Vehículo</a><hr>
@@ -89,6 +89,7 @@
         </div>
     </div>
 </div>
+
 @endsection
 
 @section('scripts')

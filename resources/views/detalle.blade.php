@@ -2,12 +2,28 @@
 
 @section('css')
 @endsection
+@section ('cabinterna')
+<div class="row ">
+        <section class="content-header">
+                <h1>
+                        Carpeta de Investigación: {{ $carpetaNueva[0]->numCarpeta }}
+                  {{--<small>Optional description</small>--}}
+                </h1>
+                <ol class="breadcrumb">
+                  <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+                  <li class="active">Here</li>
+                </ol>
+        </section>
+</div>
+@endsection
 
 @section('content')
+<div class="box box-default "> 
+    <div class="box-body"> 
 <div class="row">
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header">Carpeta de Investigación: {{ $carpetaNueva[0]->numCarpeta }}</div>
+            <div class="card-header"></div>
             <div class="card-body boxone">
                 <div class="boxtwo">
                     @include('tables.denunciantes')
@@ -86,6 +102,8 @@
 
             </div>
         </div>
+    </div>
+</div>
     </div>
 </div>
 @endsection

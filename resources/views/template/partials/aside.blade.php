@@ -36,13 +36,8 @@
             {{-- Optionally, you can add icons to the links --}}
             <li class="active"><a href="{{ url('/home') }}"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
             <li><a href="{{ route('libro.gobierno') }}"><i class="fa fa-book"></i> <span>Libro de gobierno</span></a></li>
-            @if(!isset($carpetas))
-						  @if(isset($carpetaNueva))
-							    <li><a class="nav-link" href="#"><i class="fa fa-folder-open">Iniciando carpeta: {{ $carpetaNueva[0]->numCarpeta }}</a></li>
-              @endif
-            @else
+           {{--<li><a class="nav-link" href="#"><i class="fa fa-folder-open">Iniciando carpeta: {{ $carpetaNueva[0]->numCarpeta }}</a></li>--}}
             <li><a href="{{ url('/iniciar-carpeta') }}"><i class="fa fa-folder"></i> <span>Registra nueva carpeta</span></a></li>
-            @endif
             <li class="treeview">
               <a href="#"><i class="fa fa-folder-open"></i> <span>Con mas opciones</span>
                 <span class="pull-right-container">
