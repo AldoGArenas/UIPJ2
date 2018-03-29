@@ -37,16 +37,40 @@
 		<div class="form-group" align="center">
 			<div class="row">
 				<div class="col-md-5" align="center">
-					<div class="form-group">
+				<div class="form-group" >
 						{!! Form::label('fechaIni', 'De Fecha:', ['class' => 'col-form-label-sm']) !!}
-						<div class="input-group date" id="fechaLibroIni" data-target-input="nearest">
+						<div  class="input-group date" id="fechaLibroIni" data-target-input="nearest">
 							{!! Form::text('fechaIni', null, ['class' => 'form-control form-control-sm datetimepicker-input', 'data-target' => '#fechaLibroIni', 'data-toggle' => 'datetimepicker', 'required', 'placeholder' => 'DD/MM/AAAA']) !!}
 							<div class="input-group-append" data-target="#fechaLibroIni" data-toggle="datetimepicker">
-								<div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								 <div class="input-group-text"><i class="fa fa-calendar" >
+								</i></div>
 							</div>
 						</div>
 					</div>
 				</div>
+	
+        <div class='col-sm-6'>
+            <div class="form-group">
+				{!! Form::label('fechaIni', 'De Fecha:', ['class' => 'col-form-label-sm']) !!}             
+                            <div class='input-group date' id='datetimepicker2'>
+                            <div  class="input-group date" id="fechaLibroIni" data-target-input="nearest">
+                         {!! Form::text('fechaIni', null, ['class' => 'form-control form-control-sm datetimepicker-input', 'data-target' => '#fechaLibroIni', 'data-toggle' => 'datetimepicker', 'required', 'placeholder' => 'DD/MM/AAAA']) !!}
+                    <span class="input-group-addon">
+                        <span class="fa fa-calendar"></span>
+                    </span>
+                </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker2').datetimepicker({
+                    locale: 'ru'
+                });
+            });
+        </script>
+ 
+
 
 				<div class="col-md-5" align="center" >
 					<div class="form-group">
