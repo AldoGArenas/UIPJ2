@@ -5,12 +5,13 @@
 @endsection
 @section ('cabinterna')
 <div class="row ">
-        <section class="content-header">
-                <h1>
+        <section class="content-header">            
+                <h1 class="">
                   @yield('title')
-                  {{--<small>Optional description</small>--}}
-                </h1>
-                <ol class="breadcrumb">
+                {{--<small>Optional description</small>--}}
+                </h1>                          
+                 <ol class="breadcrumb">
+                 @yield ('regresocarpeta')
                   <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
                   <li class="active">Here</li>
                 </ol>
@@ -24,7 +25,6 @@
 <div class="row ">
     <div class="col-md-12">
         <div class="card ">
-            <div class="card-header"> @yield ('botones')</div>
             <div class="">
                 @yield('contenido')
             </div>

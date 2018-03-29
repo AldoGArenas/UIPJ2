@@ -143,14 +143,26 @@
   .layout-top-nav .main-header > .logo:hover {
 	background-color: #3b8ab8;
   }
-  .btn-secondary{
+  .btn-primary{
     color: #fff;
     background-color: #424242;
     border-color: #424242;
-
+    
   }
-  .btn-secondary:hover{
+  .btn-primary:hover{
     color: #fff;
     background-color: #1b1b1b;
     border-color: #1b1b1b;
   }
+  .btn-secondary{
+    color: #1b1b1b;
+    background-color: #bdbdbd;
+    border-color: #bdbdbd;
+
+  }
+  .btn-secondary:hover{
+    color: #1b1b1b;
+    background-color: #8d8d8d;
+    border-color: #8d8d8d;
+  }
+  

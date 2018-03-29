@@ -4,7 +4,8 @@
 
 @section('contenido')
 	@include('forms.errores')
-    {!! Form::open(['route' => 'store.denunciante', 'method' => 'POST'])  !!}
+	{!! Form::open(['route' => 'store.denunciante', 'method' => 'POST'])  !!}
+	<div class="card-header">@include('forms.buttons') </div>
     {{ csrf_field() }}
     <div class="box-body">
     	<div class="row">
@@ -84,11 +85,8 @@
 				@include('fields.extra-denunciante')
 			</div>
 		</div>
-	</div>
-	
-	@include('forms.buttons')
-	{!! Form::close() !!}
-		
+	</div>	
+	{!! Form::close() !!}		
 	<div class="box-body">
 		@include('tables.denunciantes')
 	</div>

@@ -1,11 +1,16 @@
 @extends('template.form')
 
 @section('title', 'Agregar Denunciado')
+@section ('regresocarpeta')
+<a href="{{ route('view.carpeta', $idCarpeta) }}" class="btn btn-primary"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a>
+@endsection
 
 @section('contenido')
 	@include('forms.errores')
     {!! Form::open(['route' => 'store.denunciado', 'method' => 'POST'])  !!}
-    {{ csrf_field() }}
+	{{ csrf_field() }}
+	<div class="card-header">
+		@include('forms.buttons') </div>
 	<div class="box-body">
 		<div class="row">
 			<div class="col-6">
@@ -131,9 +136,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	@include('forms.buttons')
+	</div>	
 	{!! Form::close() !!}
 	<div class="box-body">
 		@include('tables.denunciados')

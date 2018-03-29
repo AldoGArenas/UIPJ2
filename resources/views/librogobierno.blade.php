@@ -63,7 +63,7 @@
 				<div class="col-md-2">
 					<div class="form-group">
 						<br>
-						<button type="button" class="btn btn-dark" id="consultar">Consultar</button>
+						<button type="button" class="btn btn-primary" id="consultar">Consultar</button>
 					</div>
 				</div>
 			</div>

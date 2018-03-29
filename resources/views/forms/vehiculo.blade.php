@@ -5,7 +5,8 @@
 @section('contenido')
 	@include('forms.errores')
     {!! Form::open(['route' => 'store.vehiculo', 'method' => 'POST'])  !!}
-    {{ csrf_field() }}
+	{{ csrf_field() }}
+	<div class="card-header">@include('forms.buttons') </div>
 	<div class="row no-gutters">
 		<div class="col-12">
 			<div class="box-body">
@@ -19,7 +20,6 @@
 			</div>
 		</div>
 	</div>
-	@include('forms.buttons')
 	{!! Form::close() !!}
 	<div class="box-body">
 		@include('tables.vehiculos')

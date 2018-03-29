@@ -19,7 +19,7 @@
 			</div>
 			<div class="col">	
 				<div class="text-right">
-					{!! Form::submit('Iniciar', ['class' => 'btn btn-dark', 'id' => 'btn-submit']) !!}
+					{!! Form::submit('Iniciar', ['class' => 'btn btn-primary', 'id' => 'btn-submit']) !!}
 				</div>
 			</div>
 		</div>
