@@ -1,3 +1,4 @@
+
 <aside class="main-sidebar">
 
         {{-- sidebar: style can be found in sidebar.less --}}
@@ -71,4 +72,7 @@
         </section>
         {{-- /.sidebar --}}
       </aside>
+      @section('scripts')
+      <script src="{{ asset('js/popper.min.js')}}" ></script>
+    @endsection
     
