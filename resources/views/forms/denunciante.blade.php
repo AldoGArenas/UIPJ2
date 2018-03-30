@@ -1,14 +1,20 @@
 @extends('template.form')
 
 @section('title', 'Agregar Denunciante')
+@section ('regresocarpeta')
+<a href="{{ route('view.carpeta', $idCarpeta) }}"  class="btn btn-primary"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a>
+@endsection
 
 @section('contenido')
 	@include('forms.errores')
-    {!! Form::open(['route' => 'store.denunciante', 'method' => 'POST'])  !!}
+	{!! Form::open(['route' => 'store.denunciante', 'method' => 'POST'])  !!}
+	<div class="card-header">
+		@include('fields.tipo-persona')
+		@include('forms.buttons') </div>
     {{ csrf_field() }}
     <div class="box-body">
     	<div class="row">
-    		@include('fields.tipo-persona')
+    		
     	</div>
     </div>
 
@@ -53,10 +59,28 @@
 
 
 
+<<<<<<< HEAD
 	
 	@include('forms.buttons')
 	{!! Form::close() !!}
 		
+=======
+	<div class="card" id="datosExtra">
+		<div class="card-header">
+			<h5 class="mb-0 text-center">
+				<a data-toggle="collapse" href="#collapseDenun" aria-expanded="false" aria-controls="collapseDenun">
+					Información sobre el Denunciante o Agraviado
+				</a>
+			</h5>
+		</div>
+		<div id="collapseDenun" class="collapse boxcollapse">
+			<div class="box-body">
+				@include('fields.extra-denunciante')
+			</div>
+		</div>
+	</div>	
+	{!! Form::close() !!}		
+>>>>>>> 7db663d592a569db0d42e50426ebb0114e6b56a3
 	<div class="box-body">
 		@include('tables.denunciantes')
 	</div>

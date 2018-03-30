@@ -1,4 +1,4 @@
-<div class="col-md-12">
+<div class="col-md-6">
 	<div class="form-group">
 		<label class="col-form-label col-form-label-sm" for="formGroupExampleInput">¿Es Persona Moral?</label>
 		<div class="clearfix"></div>

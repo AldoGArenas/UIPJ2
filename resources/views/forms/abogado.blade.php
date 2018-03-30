@@ -1,10 +1,14 @@
 @extends('template.form')
 
 @section('title', 'Agregar Abogado')
+@section ('regresocarpeta')
+<a href="{{ route('view.carpeta', $idCarpeta) }}" class="btn btn-primary"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a>
+@endsection
 @section('contenido')
 	@include('forms.errores')
     {!! Form::open(['route' => 'store.abogado', 'method' => 'POST'])  !!}
-    {{ csrf_field() }}
+	{{ csrf_field() }}
+	<div class="card-header">@include('forms.buttons') </div>
 	<div class="card">
 		<div class="card-header">
 			<h5 class="mb-0 text-center">
@@ -49,7 +53,6 @@
 			</div>
 		</div>
 	</div>
-	@include('forms.buttons')
 	{!! Form::close() !!}
 	<div class="box-body">
 		@include('tables.abogados')

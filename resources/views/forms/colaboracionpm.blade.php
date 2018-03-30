@@ -1,6 +1,9 @@
 @extends('template.form')
 
 @section('title', 'Generar documento de colaboración con Policia Ministerial')
+@section ('regresocarpeta')
+<a href="{{ route('view.carpeta', $idCarpeta) }}" class="btn btn-primary"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a>
+@endsection
 @section('contenido')
     {!! Form::open(['route' => 'colaboracion.pm', 'method' => 'POST'])  !!}
     {{ csrf_field() }}
