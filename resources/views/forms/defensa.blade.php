@@ -1,6 +1,9 @@
 @extends('template.form')
 
 @section('title', 'Agregar Defensa')
+@section ('regresocarpeta')
+<a href="{{ route('view.carpeta', $idCarpeta) }}" class="btn btn-primary"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a>
+@endsection
 @section('contenido')
     {!! Form::open(['route' => 'store.defensa', 'method' => 'POST'])  !!}
     {{ csrf_field() }}

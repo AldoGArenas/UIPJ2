@@ -6,14 +6,9 @@
 @section ('cabinterna')
 <div class="row ">
         <section class="content-header">            
-                <h1 class="">
-                  @yield('title')
-                {{--<small>Optional description</small>--}}
-                </h1>                          
-                 <ol class="breadcrumb">
-                 @yield ('regresocarpeta')
-                  <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                  <li class="active">Here</li>
+                <h1 class=""> @yield('title'){{--<small>Optional description</small>--}}</h1>                      
+                 <ol class="breadcrumb" id="superior" >
+                  <li data-toggle="tooltip"  data-placement="left" title="Regresar a carpeta"> @yield ('regresocarpeta') </li>                  
                 </ol>
         </section>
 </div>
