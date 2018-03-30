@@ -365,6 +365,9 @@ $(document).ready(function(){
     $('#datosNotif').hide();
     $('#datosExtra').hide();
     $('#extra-fis').hide();
+    $('#tabs').hide();
+
+
     //Si es empresa
     $("#esEmpresa1").change(function(event){
         if ($('#esEmpresa1').is(':checked') ) {
@@ -376,6 +379,8 @@ $(document).ready(function(){
             $('#datosNotif').show();
             $('#datosExtra').show();
             $('#extra-fis').hide();
+            $('#tabs').show();
+            $('#tabfisica').hide();
 
             //Datos personales requeridos de Persona Moral o Empresa
             $('#nombres2').prop('disabled', false);
@@ -445,6 +450,9 @@ $(document).ready(function(){
             $('#datosNotif').show();
             $('#datosExtra').show();
             $('#extra-fis').show();
+            $('#tabs').show();
+            $('#tabfisica').show();
+
 
             //Datos personales no requeridos de Persona Moral o Empresa
             $('#nombres2').prop('disabled', true);

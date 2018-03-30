@@ -7,12 +7,28 @@
           <div class="user-panel">
               @auth
             <div class="pull-left image">
-              <img src="{{asset('bower_components/admin-lte/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+              <img src="{{asset('bower_components/admin-lte/dist/img/user2-160x160.jpg')}}" class="rounded-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                {{ Auth::user()->nombres}}
-              {{-- Status --}}
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+              <div class="row">
+               <div class="col-md-3">{{ Auth::user()->nombres}}</div>
+               <div class="col-md-1"> <a href="#"><i class="fa fa-circle text-success"></i> Online</a></div>             
+               <div class="col-md-2"><a id="botonsalir" href="{{ route('logout') }}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();" class="btn btn-sm btn-secondary"><i class="fa fa-sign-out"></i></a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form></div>
+                {{--<div class="col-md-1 "><p >cerrar sesión</p></div>--}}
+              </div>
+               <div class="row">
+               <div class="col-md-6">{{ Auth::user()->primerAp." ".Auth::user()->segundoAp}}</div>
+              {{-- Status --}}              
+            </div>
+            <div class="row">
+            <div class="col-md-6"><small>Num de Fisc: <b></b> </small></div>
+             <div class="col-md-6">{{ Auth::user()->numFiscal}}</div>
+             
+            </div>
             </div>
             @endauth
           </div>
