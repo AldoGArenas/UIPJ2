@@ -80,9 +80,10 @@ desired effect
             --}}
     </div>
     <script src="{{ asset ('js/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{ asset('js/popper.min.js')}}" ></script>
      {{-- Bootstrap 4 --}}
     <script src="{{ asset ('js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('js/popper.min.js')}}" ></script>
+    
      {{-- AdminLTE App --}}
     <script src="{{ asset ('bower_components/admin-lte/dist/js/adminlte.min.js')}}"></script>
     

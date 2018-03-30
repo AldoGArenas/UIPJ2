@@ -2,7 +2,7 @@
 
 @section('title', 'Agregar Defensa')
 @section ('regresocarpeta')
-<a href="{{ route('view.carpeta', $idCarpeta) }}" class="btn btn-primary"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span></a>
+<a href="{{ route('view.carpeta', $idCarpeta) }}"  class="btn btn-primary"><i class="fa fa-folder-open"></i></a>
 @endsection
 @section('contenido')
     {!! Form::open(['route' => 'store.defensa', 'method' => 'POST'])  !!}

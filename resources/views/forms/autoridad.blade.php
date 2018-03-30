@@ -1,6 +1,9 @@
 @extends('template.form')
 
 @section('title', 'Agregar Autoridad')
+section ('regresocarpeta')
+<a href="{{ route('view.carpeta', $idCarpeta) }}"  class="btn btn-primary"><i class="fa fa-folder-open"></i></a>
+@endsection
 @section('contenido')
 	@include('forms.errores')
     {!! Form::open(['route' => 'store.autoridad', 'method' => 'POST'])  !!}

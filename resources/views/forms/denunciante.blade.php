@@ -63,34 +63,9 @@
 	</div>
 </div>
 
-</div>
-
-
-
-
-
-
-
-<<<<<<< HEAD
-	
-			
-=======
-	<div class="card" id="datosExtra">
-		<div class="card-header">
-			<h5 class="mb-0 text-center">
-				<a data-toggle="collapse" href="#collapseDenun" aria-expanded="false" aria-controls="collapseDenun">
-					Información sobre el Denunciante o Agraviado
-				</a>
-			</h5>
-		</div>
-		<div id="collapseDenun" class="collapse boxcollapse">
-			<div class="box-body">
-				@include('fields.extra-denunciante')
-			</div>
-		</div>
-	</div>	
+</div>	
 	{!! Form::close() !!}		
->>>>>>> 7db663d592a569db0d42e50426ebb0114e6b56a3
+
 	<div class="box-body">
 		@include('tables.denunciantes')
 	</div>
