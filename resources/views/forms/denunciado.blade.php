@@ -61,82 +61,58 @@
 		</div>
 	</div>
 
-	<div class="comparecencia">
-		<div class="card" id="datosPer">
-			<div class="card-header">
-				<h5 class="mb-0 text-center">
-					<a data-toggle="collapse" href="#collapsePersonales2" aria-expanded="false" aria-controls="collapsePersonales2">
-						Datos personales
-					</a>
-				</h5>
-			</div>
-			<div id="collapsePersonales2" class="collapse show boxcollapse">
-				<div class="box-body">
-					@include('fields.personales')
-				</div>
-			</div>
-		</div>
+<div id="comparecenciatabs">
+	<ul class="nav nav-tabs">
+ 		<li class="nav-item">
+    		<a class="nav-link active" data-toggle="tab" href="#collapsePersonales2">Datos Personales</a>
+  		</li>
+  		<li class="nav-item">
+    		<a class="nav-link" data-toggle="tab" href="#collapseDir2">Direccion</a>
+  		</li>
+  		<li class="nav-item" id="tabfisica2">
+    		<a class="nav-link" data-toggle="tab" href="#collapseTrab2">Datos del trabajo</a>
+  		</li>
+  		<li class="nav-item">
+    		<a class="nav-link" data-toggle="tab" href="#collapseNotifs2">Dirección para notificaciones</a>
+  		</li>
+   		<li class="nav-item">
+    		<a class="nav-link" data-toggle="tab" href="#collapseDenun2">Información sobre el Denunciado</a>
+  		</li>
+	</ul>
+</div>
 
-		<div class="card" id="datosDir">
-			<div class="card-header">
-				<h5 class="mb-0 text-center">
-					<a data-toggle="collapse" href="#collapseDir2" aria-expanded="false" aria-controls="collapseDir2">
-						Dirección
-					</a>
-				</h5>
-			</div>
-			<div id="collapseDir2" class="collapse boxcollapse">
-				<div class="box-body">
-					@include('fields.direcciones')
-				</div>
-			</div>
+<!-- Contenido en Pestañas -->
+<div class="tab-content" id="contenidotabs">
+	<div class="tab-pane active container" id="collapsePersonales2">
+  		<div class="box-body">
+		@include('fields.personales')
 		</div>
+	</div>
+<div class="tab-pane container" id="collapseDir2">
+  		<div class="box-body">
+		@include('fields.direcciones')
+		</div>
+</div>
+<div class="tab-pane container" id="collapseTrab2">
+  		<div class="box-body">
+		@include('fields.lugartrabajo')
+		</div>
+  
+</div>
+<div class="tab-pane container" id="collapseNotifs2">
+	<div class="box-body">
+	@include('fields.notificaciones')
+	</div>
+</div>
+<div class="tab-pane container" id="collapseDenun2">
+	<div class="box-body">
+	@include('fields.extra-denunciado')
+	</div>
+</div>
 
-		<div class="card" id="datosTrab">
-			<div class="card-header">
-				<h5 class="mb-0 text-center">
-					<a data-toggle="collapse" href="#collapseTrab2" aria-expanded="false" aria-controls="collapseTrab2">
-						Datos del trabajo
-					</a>
-				</h5>
-			</div>
-			<div id="collapseTrab2" class="collapse boxcollapse">
-				<div class="box-body">
-					@include('fields.lugartrabajo')
-				</div>
-			</div>
-		</div>
+</div>
 
-		<div class="card" id="datosNotif">
-			<div class="card-header">
-				<h5 class="mb-0 text-center">
-					<a data-toggle="collapse" href="#collapseNotifs2" aria-expanded="false" aria-controls="collapseNotifs2">
-						Dirección para notificaciones
-					</a>
-				</h5>
-			</div>
-			<div id="collapseNotifs2" class="collapse boxcollapse">
-				<div class="box-body">
-					@include('fields.notificaciones')
-				</div>
-			</div>
-		</div>
-
-		<div class="card" id="datosExtra">
-			<div class="card-header">
-				<h5 class="mb-0 text-center">
-					<a data-toggle="collapse" href="#collapseDenun2" aria-expanded="false" aria-controls="collapseDenun2">
-						Otros datos
-					</a>
-				</h5>
-			</div>
-			<div id="collapseDenun2" class="collapse boxcollapse">
-				<div class="box-body">
-					@include('fields.extra-denunciado')
-				</div>
-			</div>
-		</div>
-	</div>	
+	
 	{!! Form::close() !!}
 	<div class="box-body">
 		@include('tables.denunciados')

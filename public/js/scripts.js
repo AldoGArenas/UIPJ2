@@ -33,6 +33,7 @@ $(document).ready(function(){
     $('#qrr').hide();
     $('#conocido').hide();
     $('.comparecencia').hide();
+    $('#comparecenciatabs').hide();
     //Si es QRR
     $("#tipoDenunciado1").change(function(event){
         if ($('#tipoDenunciado1').is(':checked') ) {
@@ -380,8 +381,9 @@ $(document).ready(function(){
             $('#datosExtra').show();
             $('#extra-fis').hide();
             $('#tabs').show();
-            $('#tabfisica').hide();
-
+            $('#tabfisica').hide();   
+            $('#tabfisica2').hide();          
+            $('#comparecenciatabs').show();
             //Datos personales requeridos de Persona Moral o Empresa
             $('#nombres2').prop('disabled', false);
             $('#rfc2').prop('disabled', false);
@@ -451,8 +453,9 @@ $(document).ready(function(){
             $('#datosExtra').show();
             $('#extra-fis').show();
             $('#tabs').show();
+            $('#comparecenciatabs').show();
             $('#tabfisica').show();
-
+            $('#tabfisica2').show();
 
             //Datos personales no requeridos de Persona Moral o Empresa
             $('#nombres2').prop('disabled', true);
