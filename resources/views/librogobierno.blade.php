@@ -49,22 +49,6 @@
 						</div>
 					</div>
 
-        <div class='col-sm-6'>
-            <div class="form-group">
-				{!! Form::label('fechaIni', 'De Fecha:', ['class' => 'col-form-label-sm']) !!}             
-                          
-                            <div  class="input-group date" id="fechaLibroIni" data-target-input="nearest">
-                         {!! Form::text('fechaIni', null, ['class' => 'form-control form-control-sm datetimepicker-input', 'data-target' => '#fechaLibroIni', 'data-toggle' => 'datetimepicker', 'required', 'placeholder' => 'DD/MM/AAAA']) !!}
-                    <span class="input-group-addon" data-target="#fechaLibroIni" data-toggle="datetimepicker">
-                        <i class="fa fa-calendar" >
-						</i>
-                    </span>
-                </div>
-              
-            </div>
-        </div>
-       
- 
 
 
 				<div class="col-md-5" align="center" >
