@@ -12,17 +12,7 @@
 		@include('fields.tipo-persona')
 		@include('forms.buttons') </div>
     {{ csrf_field() }}
-    <div class="box-body">
-    	<div class="row">
-    		
-    	</div>
-    </div>
-
-
-
-
-
-<ul class="nav nav-tabs">
+  <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" data-toggle="tab" href="#collapsePersonales1">Datos Personales</a>
   </li>
@@ -39,32 +29,18 @@
     <a class="nav-link" data-toggle="tab" href="#menu2">Información sobre el Denunciante o Agraviado</a>
   </li>
 </ul>
-
-
-
 <!-- Tab panes -->
 <div class="tab-content">
   <div class="tab-pane active container" id="collapsePersonales1">
-  				<div class="box-body">
-				@include('fields.personales')
-				</div>
+		<div class="card container-fluid">
+			@include('fields.personales')
+						
+		</div>
+  				
   </div>
   <div class="tab-pane container" id="menu1">...</div>
   <div class="tab-pane container" id="menu2">...</div>
 </div>
-
-
-
-
-
-
-
-<<<<<<< HEAD
-	
-	@include('forms.buttons')
-	{!! Form::close() !!}
-		
-=======
 	<div class="card" id="datosExtra">
 		<div class="card-header">
 			<h5 class="mb-0 text-center">
@@ -80,7 +56,6 @@
 		</div>
 	</div>	
 	{!! Form::close() !!}		
->>>>>>> 7db663d592a569db0d42e50426ebb0114e6b56a3
 	<div class="box-body">
 		@include('tables.denunciantes')
 	</div>

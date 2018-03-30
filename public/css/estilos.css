@@ -3,7 +3,8 @@
  * ----------
  */
   .main-header .navbar {
-	background-color: #424242;
+  background-color: #424242;
+  height: 50px;
   }
    .main-header .navbar .nav > li > a {
 	color: #ffffff;
@@ -31,6 +32,17 @@
    .main-header .navbar .sidebar-toggle:hover {
 	background-color: #1b1b1b;
   }
+  .dropdown-menu{
+    padding-right: 100px;
+    right: 0px;
+  }
+
+  /*#nav-derecha{
+    padding-right: 0%;
+   }*/
+   #nav-derecha > li > a {
+    color: #ffffff;
+   }
   @media (max-width: 767px) {
 	 .main-header .navbar .dropdown-menu li.divider {
 	  background-color: rgba(255, 255, 255, 0.1);
@@ -56,6 +68,10 @@
    .content-header {
   background: transparent;
   padding-left: 35px;
+  width: 95%;
+  margin-right: auto;
+  margin-left: auto;  
+  padding-right: 15px;
   }
    .wrapper,
    .main-sidebar,
@@ -165,11 +181,25 @@
     background-color: #8d8d8d;
     border-color: #8d8d8d;
   }
+  #botonsalir{
+    padding:.15rem .5rem;
+    font-size:.5rem;
+    line-height:1.5;
+    border-radius:.2rem;
+  }
+  #cerrar-sesion{
+    font-size: 0.5rem;
+    text-align: center;
+  }
   #superior >li >a{
     color: #ffffff;
-    margin-right: 90px;
+    margin-right: 0%;
   }
   .form-check-inline{
     display: inline-block;
+  }
+  .card-header{
+    margin-bottom: 0;
+    padding-bottom: 0px;
   }
   

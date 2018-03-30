@@ -8,7 +8,7 @@
   {{-- Tell the browser to be responsive to screen width --}}
   {{--<link href="{{ asset("/bower_components/admin-lte/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />--}}
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" type="text/css" href="{{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('/css/bootstrap.min.css')}}">
   {{-- Font Awesome --}}
   <link rel="stylesheet" type="text/css" href="{{asset ('bower_components/font-awesome/css/font-awesome.min.css')}}">
   {{-- Ionicons --}}
@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="{{ asset('css/cssfonts.css') }}">
   <link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
   <link rel="stylesheet" href="{{ asset('css/theme-jquery-validation.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/tempusdominus-bootstrap-4.min.css') }}">
   @yield('css')
   {{-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --}}
   {{-- WARNING: Respond.js doesn't work if you view the page via file:// --}}
@@ -78,9 +79,9 @@ desired effect
             @include('template.partials.footer')
             --}}
     </div>
-    <script src="{{ asset ('bower_components/jquery/dist/jquery.min.js')}}"></script>
+    <script src="{{ asset ('/js/jquery-3.2.1.min.js')}}"></script>
      {{-- Bootstrap 4 --}}
-    <script src="{{ asset ('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset ('/js/bootstrap.min.js')}}"></script>
      {{-- AdminLTE App --}}
     <script src="{{ asset ('bower_components/admin-lte/dist/js/adminlte.min.js')}}"></script>
     <script src="{{ asset('js/popper.min.js')}}" ></script>
