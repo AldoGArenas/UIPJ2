@@ -13,60 +13,45 @@
 		@include('forms.buttons') </div>
     {{ csrf_field() }}
 
-   <script type="text/javascript">
-$( '.micheckbox' ).on( 'click', function() {
-    if( $(this).is(':checked') ){
-        // Hacer algo si el checkbox ha sido seleccionado
-        alert("El checkbox con valor " + $(this).val() + " ha sido seleccionado");
-    } else {
-        // Hacer algo si el checkbox ha sido deseleccionado
-        alert("El checkbox con valor " + $(this).val() + " ha sido deseleccionado");
-    }
-});
-</script>
 
 <div id="tabs">
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" href="#collapsePersonales1">Datos Personales</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#collapseDir1">Direccion</a>
-  </li>
-  <li class="nav-item" id="tabfisica">
-    <a class="nav-link" data-toggle="tab" href="#collapseTrab1">Datos del trabajo</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#collapseNotifs1">Dirección para notificaciones</a>
-  </li>
-   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#collapseDenun">Información sobre el Denunciante o Agraviado</a>
-  </li>
-</ul>
+	<ul class="nav nav-tabs">
+ 		<li class="nav-item">
+    		<a class="nav-link active" data-toggle="tab" href="#collapsePersonales1">Datos Personales</a>
+  		</li>
+  		<li class="nav-item">
+    		<a class="nav-link" data-toggle="tab" href="#collapseDir1">Direccion</a>
+  		</li>
+  		<li class="nav-item" id="tabfisica">
+    		<a class="nav-link" data-toggle="tab" href="#collapseTrab1">Datos del trabajo</a>
+  		</li>
+  		<li class="nav-item">
+    		<a class="nav-link" data-toggle="tab" href="#collapseNotifs1">Dirección para notificaciones</a>
+  		</li>
+   		<li class="nav-item">
+    		<a class="nav-link" data-toggle="tab" href="#collapseDenun">Información sobre el Denunciante o Agraviado</a>
+  		</li>
+	</ul>
 </div>
 
-<!-- Tab panes -->
+<!-- Pestañas -->
 <div class="tab-content" id="contenidotabs">
-
-  <div class="tab-pane active container" id="collapsePersonales1">
+	<div class="tab-pane active container" id="collapsePersonales1">
   		<div class="box-body">
 		@include('fields.personales')
 		</div>
-  </div>
-  <div class="tab-pane container" id="collapseDir1">
+	</div>
+<div class="tab-pane container" id="collapseDir1">
   		<div class="box-body">
 		@include('fields.direcciones')
 		</div>
-  </div>
- 
-     <div class="tab-pane container" id="collapseTrab1">
+</div>
+<div class="tab-pane container" id="collapseTrab1">
   		<div class="box-body">
 		@include('fields.lugartrabajo')
 		</div>
   
-  </div>
-
-
+</div>
 <div class="tab-pane container" id="collapseNotifs1">
 	<div class="box-body">
 	@include('fields.notificaciones')
