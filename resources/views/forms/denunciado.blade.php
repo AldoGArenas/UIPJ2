@@ -81,7 +81,7 @@
 	</ul>
 </div>
 
-<!-- CONTENIDO en Pestañas -->
+<!-- Contenido en Pestañas -->
 <div class="tab-content" id="contenidotabs">
 	<div class="tab-pane active container" id="collapsePersonales2">
   		<div class="box-body">
