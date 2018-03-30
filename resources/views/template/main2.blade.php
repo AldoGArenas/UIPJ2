@@ -79,12 +79,13 @@ desired effect
             @include('template.partials.footer')
             --}}
     </div>
-    <script src="{{ asset ('/js/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{ asset ('js/jquery-3.2.1.min.js')}}"></script>
      {{-- Bootstrap 4 --}}
-    <script src="{{ asset ('/js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset ('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/popper.min.js')}}" ></script>
      {{-- AdminLTE App --}}
     <script src="{{ asset ('bower_components/admin-lte/dist/js/adminlte.min.js')}}"></script>
-    <script src="{{ asset('js/popper.min.js')}}" ></script>
+    
     <script src="{{asset ('js/sweetalert.min.js')}}"></script>
 	<script src="{{ asset('plugins/select2/select2.min.js')}}" ></script>
 	<script src="{{ asset('js/toastr.min.js')}}" ></script>

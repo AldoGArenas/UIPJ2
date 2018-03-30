@@ -43,6 +43,7 @@
     <script src="{{ asset('js/validations.js') }}"></script>
     <script src="{{ asset('js/selects.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js')}}" ></script>
     <script>
         //$('#narracionIph').restrictLength($('#contaNarr'));
         //$('#descripcionHechos').restrictLength($('#contaDesc'));

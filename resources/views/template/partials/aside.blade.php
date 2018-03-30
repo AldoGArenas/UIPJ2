@@ -14,7 +14,7 @@
                <div class="col-md-3">{{ Auth::user()->nombres}}</div>
                <div class="col-md-1"> <a href="#"><i class="fa fa-circle text-success"></i> Online</a></div>             
                <div class="col-md-2"><a id="botonsalir" href="{{ route('logout') }}" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();" class="btn btn-sm btn-secondary"><i class="fa fa-sign-out"></i></a>
+                document.getElementById('logout-form').submit();" class="btn btn-sm btn-secondary"><i class="fa fa-sign-out"></i>Cerrar sesion</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     {{ csrf_field() }}
                 </form></div>
