@@ -1,6 +1,6 @@
 <header>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-		<a class="navbar-brand" href="{{ url('/home') }}"><img src="{{ asset('img/logofge2.png') }}" alt="" class="logofge"></a>
+		<a class="navbar-brand" href="{{ url('/home') }}"><img src="" alt="" class="logofge"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
 		</button>

@@ -9,8 +9,11 @@
 	@include('forms.errores')
 	{!! Form::open(['route' => 'store.denunciante', 'method' => 'POST'])  !!}
 	<div class="card-header">
+		<div class="row">
 		@include('fields.tipo-persona')
-		@include('forms.buttons') </div>
+		@include('forms.buttons')
+	</div>
+</div>
     {{ csrf_field() }}
 
 

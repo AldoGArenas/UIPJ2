@@ -7,7 +7,7 @@
   {{-- Tell the browser to be responsive to screen width --}}
   {{--<link href="{{ asset("/bower_components/admin-lte/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />--}}
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <link rel="stylesheet" type="text/css" href="{{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('/css/bootstrap.min.css')}}">
   {{-- Font Awesome --}}
   <link rel="stylesheet" type="text/css" href="{{asset ('bower_components/font-awesome/css/font-awesome.min.css')}}">
   {{-- Ionicons --}}
@@ -17,6 +17,7 @@
   {{-- AdminLTE Skins. We have chosen the skin-blue for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect.--}}
+  <link rel="stylesheet" type="text/css" href="{{asset('/css/estilos.css')}}">
   <link rel="stylesheet" type="text/css" href="{{asset ('bower_components/admin-lte/dist/css/skins/skin-blue.min.css')}}">
   {{-- iCheck--}}
   <link rel="stylesheet"type="text/css" href="{{asset ('bower_components/admin-lte/plugins/iCheck/square/blue.css')}}">
@@ -34,41 +35,47 @@
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a ><img src="{{ asset('img/logofge.png') }}" alt="" style="height:200px"></a>
-  </div>
+<div class="login-box cf card text-white bg-dark"id="loginbox">
+  
   {{-- /.login-logo --}}
-  <div class="login-box-body">
-    <p class="login-box-msg">Ingresa tus datos para iniciar sesión</p>
-
-    <form  method="POST"action="{{ route('login') }}">
+  
+      <div class="card-body logo-fge" id="logo-fge">
+          <a ><img src="{{ asset('img/logo-fge-svg.svg') }}" alt=""></a>
+          {{--<p class="login-box-msg">Ingresa tus datos para iniciar sesión</p>--}}
+        </div>   
+    <form class="card-body abajo"  method="POST"action="{{ route('login') }}">
       {{csrf_field()}}
       <div class="form-group has-feedback row{{ $errors->has('email') ? ' has-error' : '' }}">
-        <input id="email" type="email" class="form-control" placeholder="Correo electrónico "name ="email" value="{{ old('email') }}">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          <div class="input-group">
+            <span class="rounded-left"><i class="fa fa-envelope fa-lg " aria-hidden="true"></i></span>
+        <input id="email" type="email" class="form-control rounded" placeholder="Correo electrónico "name ="email" value="{{ old('email') }}">
+          </div>
           @if ($errors->has('email'))
-          <span class="help-block">
+          <span class="help-block" id="error">
               <strong>{{ $errors->first('email') }}</strong>
           </span>
            @endif
       </div>
       <div class="form-group has-feedback row{{ $errors->has('password') ? ' has-error' : '' }}" >
-        <input id="password" type="password" name="password" class="form-control" placeholder="Contraseña">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            @if ($errors->has('password'))
-               <span class="help-block">
-                 <strong>{{ $errors->first('password') }}</strong>
-               </span>
-            @endif
+        <div class="input-group">
+          <span class="rounded"><i class="fa fa-key fa-lg " aria-hidden="true"></i></span>            
+            <input id="password" type="password" name="password" class=" form-control rounded" placeholder="Contraseña">
+            
+                @if ($errors->has('password'))
+                   <span class="help-block">
+                     <strong>{{ $errors->first('password') }}</strong>
+                   </span>
+                @endif
         </div>
-      <div class="row">
+         
+        </div>
+      
         {{-- /.col --}}
-        <div class="col-md-4 col-md-offset-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat ">Inicia</button>
+        <div class="col-md-12 ">
+          <button type="submit" class="btn btn-inicio pull-right ">Entrar</button>
         </div>
         {{-- /.col --}}
-      </div>
+      
     </form>
 
     {{--<div class="social-auth-links text-center">
@@ -83,7 +90,7 @@
     {{--<a href="#">I forgot my password</a><br>--}}
     
 
-  </div>
+  
   {{-- /.login-box-body --}}
 </div>
 {{-- /.login-box --}}

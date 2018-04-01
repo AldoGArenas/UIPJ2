@@ -2,6 +2,70 @@
  * Skin: Blue
  * ----------
  */
+ .login-page{
+   background-color: #6d6d6d;
+ }
+ .login-box{
+  background-color: transparent; 
+ -webkit-border-radius: 10px 10px 10px 10px;
+border: 1px solid #000000;
+box-shadow: 3px 3px 5px #00000060;
+ }
+ #logo-fge {
+background-color: #424242;
+padding: 15px 10px;
+text-align: center;
+font-size: 14px;
+line-height: 20px;
+color: #fff;
+ }
+#logo-fge > a >img{
+  width: 50%;
+  
+}
+ .abajo{
+  background-color: #1b1b1b;
+  padding: 2.1rem;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  }
+  .abajo span{
+    background-color: transparent;
+    position: absolute;
+    margin-left: 5px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    
+  }
+  #error{
+    position: relative;
+    padding-top: 20px;
+    color: #ffffff;
+  }
+  .abajo input{
+    padding-left: 35px;
+    
+  }
+  .abajo i{
+    background-color: transparent;
+    padding-top: 60%;
+    position: relative;
+    color: grey;
+    z-index: 3; 
+    size: 1.2em;
+    -webkit-border-radius: 5px 5px 5px 5px;
+  }
+  
+ /* .abajo{
+    -webkit-border-radius: 0px 0px 10px 10px;
+  }*/
+  .btn-inicio{
+    color: #fff;
+    background-color: #424242;
+    border-color: #424242;
+    -webkit-border-radius: 5px 5px 5px 5px;
+  }
   .main-header .navbar {
   background-color: #424242;
   height: 50px;

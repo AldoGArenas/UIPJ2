@@ -10,30 +10,38 @@
     {!! Form::open(['route' => 'store.denunciado', 'method' => 'POST'])  !!}
 	{{ csrf_field() }}
 	<div class="card-header">
-		@include('forms.buttons') </div>
-	<div class="box-body">
 		<div class="row">
-			<div class="col-6">
-				<div class="form-group">
-					<label class="col-form-label col-form-label-sm" for="formGroupExampleInput">Selecciona una opción</label>
-					<div class="clearfix"></div>
-					<div class="form-check form-check-inline">
-						<label class="form-check-label col-form-label col-form-label-sm">
-							<input class="form-check-input" type="radio" id="tipoDenunciado1" name="tipoDenunciado" value="1" required> Q.R.R.
-						</label>
+				<div class="col-6">
+						<div class="form-group">
+							<label class="col-form-label col-form-label-sm" for="formGroupExampleInput">Selecciona una opción</label>
+							<div class="clearfix"></div>
+							<div class="form-check form-check-inline">
+								<label class="form-check-label col-form-label col-form-label-sm">
+									<input class="form-check-input" type="radio" id="tipoDenunciado1" name="tipoDenunciado" value="1" required> Q.R.R.
+								</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<label class="form-check-label col-form-label col-form-label-sm">
+									<input class="form-check-input" type="radio" id="tipoDenunciado2" name="tipoDenunciado" value="2" required> Conoce al Denunciado o Imputado
+								</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<label class="form-check-label col-form-label col-form-label-sm">
+									<input class="form-check-input" type="radio" id="tipoDenunciado3" name="tipoDenunciado" value="3" required> Por comparecencia
+								</label>
+							</div>
+						</div>
 					</div>
-					<div class="form-check form-check-inline">
-						<label class="form-check-label col-form-label col-form-label-sm">
-							<input class="form-check-input" type="radio" id="tipoDenunciado2" name="tipoDenunciado" value="2" required> Conoce al Denunciado o Imputado
-						</label>
-					</div>
-					<div class="form-check form-check-inline">
-						<label class="form-check-label col-form-label col-form-label-sm">
-							<input class="form-check-input" type="radio" id="tipoDenunciado3" name="tipoDenunciado" value="3" required> Por comparecencia
-						</label>
-					</div>
-				</div>
-			</div>
+					<div class="col-md-4 comparecencia">
+							<div class="row">
+								@include('fields.tipo-persona')
+							</div>
+						</div>
+						div
+		@include('forms.buttons') </div>
+	</div>
+	<div class="box-body">
+		<div class="row">			
 			<div class="col-6 comparecencia">
 				<div class="row">
 	    			@include('fields.tipo-persona')
