@@ -10,10 +10,11 @@
     {!! Form::open(['route' => 'store.familiar', 'method' => 'POST'])  !!}
 	{{ csrf_field() }}
 	<div class="card-header">
+			<div class="row">
 		<div class="col-md-12">
 			@include('forms.buttons')
 		</div>
-			
+	</div>	
 	</div>
 	<div class="row no-gutters">
 		<div class="col-12">

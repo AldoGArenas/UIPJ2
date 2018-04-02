@@ -42,6 +42,7 @@
 						</div>		
 					
 	</div>
+	</div>
 	<div class="box-body">
 		{{--<div class="row">			
 			<div class="col-6 comparecencia">
