@@ -1,4 +1,4 @@
-<h6>Acusaciones</h6>
+
 <div class="table">
     <table class="table table-striped">
         <thead>
