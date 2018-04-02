@@ -11,7 +11,7 @@
 	{{ csrf_field() }}
 	<div class="card-header">
 		<div class="row">
-				<div class="col-6">
+				<div class="col-md-6">
 						<div class="form-group">
 							<label class="col-form-label col-form-label-sm" for="formGroupExampleInput">Selecciona una opción</label>
 							<div class="clearfix"></div>
@@ -32,22 +32,24 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 comparecencia">
-							<div class="row">
-								@include('fields.tipo-persona')
-							</div>
+					<div class="row col-lg-6 ">
+					<div class="col comparecencia">									
+							@include('fields.tipo-persona')					
 						</div>
-						div
-		@include('forms.buttons') </div>
+						
+							@include('forms.buttons') 
+							
+						</div>		
+					
 	</div>
 	<div class="box-body">
-		<div class="row">			
+		{{--<div class="row">			
 			<div class="col-6 comparecencia">
 				<div class="row">
 	    			@include('fields.tipo-persona')
 				</div>
 	    	</div>
-		</div>
+		</div>--}}
 	</div>
 
 	<div id="qrr">
