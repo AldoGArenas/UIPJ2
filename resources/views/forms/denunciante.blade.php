@@ -11,7 +11,9 @@
 	<div class="card-header">
 		<div class="row">
 		@include('fields.tipo-persona')
+		<div class="col-md-10">
 		@include('forms.buttons')
+	</div>
 	</div>
 </div>
     {{ csrf_field() }}

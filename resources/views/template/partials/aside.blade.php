@@ -53,11 +53,13 @@
             {{-- Optionally, you can add icons to the links --}}
             <li class="{{ Request::is( 'home') ? 'active' : '' }}"><a href="{{ url('/home') }}"><i class="fa fa-home"></i> <span>Inicio</span></a></li>
             <li class="{{ Request::is( 'libro-gobierno') ? 'active' : '' }}"><a href="{{ route('libro.gobierno') }}"><i class="fa fa-book"></i> <span>Libro de gobierno</span></a></li>
+            @if(isset($idCarpeta))
+						<li class="{{ Request::is( 'carpeta') ? 'active' : '' }}" style="background-color:#424242 "><a href="{{ route('view.carpeta', $idCarpeta) }}"><i class="fa fa-folder-open"></i> <span>Carpeta Abierta</span></a></li>
+            @endif
            {{--<li><a class="nav-link" href="#"><i class="fa fa-folder-open">Iniciando carpeta: {{ $carpetaNueva[0]->numCarpeta }}</a></li>--}}
             <li class="{{ Request::is( 'iniciar-carpeta') ? 'active' : '' }}"><a href="{{ url('/iniciar-carpeta') }}"><i class="fa fa-folder"></i> <span>Registra nueva carpeta</span></a></li>
-            @if(isset($carpetaNueva[0]->idCarpeta))
-            <li class="{{ Request::is( 'carpeta', $idCarpeta) ? 'active' : '' }}"><a href="{{ route('view.carpeta', $idCarpeta) }}"><i class="fa fa-folder"></i> <span>Carpeta Abierta</span></a></li>
-            @endif
+            
+            
            {{-- <li class="treeview">
               <a href="#"><i class="fa fa-folder-open"></i> <span>Con mas opciones</span>
                 <span class="pull-right-container">
