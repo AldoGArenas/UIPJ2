@@ -8,10 +8,13 @@
 	@include('forms.errores')
     {!! Form::open(['route' => 'store.abogado', 'method' => 'POST'])  !!}
 	{{ csrf_field() }}
-	<div class="card-header">@include('forms.buttons') </div>
-	
-
-
+	<div class="card-header">
+		<div class="row">
+			<div class="col-md-12">
+				@include('forms.buttons')
+			</div>
+		</div>
+	</div>
 <div id="abogadotabs">
 	<ul class="nav nav-tabs">
  		<li class="nav-item">

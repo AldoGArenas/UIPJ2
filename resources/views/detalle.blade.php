@@ -19,8 +19,7 @@
 
 @section('content')
 
-
-
+<div class="card-header">
 <div id="tabscarpeta">
     <ul class="nav nav-tabs">
         <li class="nav-item">
@@ -32,25 +31,33 @@
         <li class="nav-item" id="tabfisica">
             <a class="nav-link" data-toggle="tab" href="#tabogado">Abogados</a>
         </li>
+        @if((count($denunciantes)>0 || count($denunciados)>0) && count($abogados)>0)
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#tdefensa">Defensas</a>
+            @endif
         </li>
+        @if(count($denunciantes)>0 || count($denunciados)>0)
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#tfamiliar">Familiares</a>
+        @endif
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#tdelito">Delitos</a>
         </li>
+        @if(count($delitos)>0 && count($denunciantes)>0 && count($denunciados)>0)
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#tacusacion">Acusaciones</a>
+            @endif
         </li>
          <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#tvehiculo">Vehículos</a>
         </li>
     </ul>
 </div>
+</div>
 
 <!-- Contenido en Pestañas -->
+<div class="card">
 <div class="tab-content" id="contenidotabs">
     <div class="tab-pane active container" id="tdenunciante">
                    <div class="boxtwo">
@@ -92,24 +99,24 @@
  </div>
 
 <div class="tab-pane container" id="tdefensa">
-         @if((count($denunciantes)>0 || count($denunciados)>0) && count($abogados)>0)
+         
                 <div class="boxtwo">
                     @include('tables.defensas')
                     <div class="text-right"> 
                         <a href="{{ route('new.defensa', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Asignar defensa</a><hr>
                     </div>
                 </div>
-                @endif      
+                   
  </div>
 <div class="tab-pane container" id="tfamiliar">
-     @if(count($denunciantes)>0 || count($denunciados)>0)
+     
                 <div class="boxtwo">
                     @include('tables.familiares')
                     <div class="text-right"> 
                         <a href="{{ route('new.familiar', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Agregar persona</a><hr>
                     </div>
                 </div>
-                @endif            
+                       
  </div>
  <div class="tab-pane container" id="tdelito">
      <div class="boxtwo">
@@ -120,7 +127,7 @@
                 </div>          
  </div>
 <div class="tab-pane container" id="tacusacion">
-   @if(count($delitos)>0 && count($denunciantes)>0 && count($denunciados)>0)
+  
                 <div class="boxtwo">
                     @include('tables.acusaciones')
                     <div class="text-right">
@@ -131,7 +138,7 @@
                         <a href="{{ route('new.acusacion', $carpetaNueva[0]->id) }}" class="btn btn-secondary">Agregar Acusación</a><hr>
                     </div>
                 </div>
-                @endif             
+                          
  </div>
 <div class="tab-pane container" id="tvehiculo">
       <div class="boxtwo">
@@ -143,7 +150,8 @@
  </div>
 
   
-        </div>  <!-- Fin Contenido en Pestañas -->
+        </div>
+    </div>  <!-- Fin Contenido en Pestañas -->
             
 @endsection
 

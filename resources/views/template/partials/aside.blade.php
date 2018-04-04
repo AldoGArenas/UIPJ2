@@ -78,6 +78,6 @@
         {{-- /.sidebar --}}
       </aside>
       @section('scripts')
-      <script src="{{ asset('js/popper.min.js')}}" ></script>
+      {{--<script src="{{ asset('js/popper.min.js')}}" ></script>--}}
     @endsection
     

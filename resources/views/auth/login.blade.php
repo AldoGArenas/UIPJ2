@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
+  <title>Bienvenido</title>
   {{-- Tell the browser to be responsive to screen width --}}
   {{--<link href="{{ asset("/bower_components/admin-lte/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet" type="text/css" />--}}
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -39,7 +39,7 @@
   
   {{-- /.login-logo --}}
   
-      <div class="card-body logo-fge" id="logo-fge">
+      <div class="card-body logo-fge rounded-top" id="logo-fge">
           <a ><img src="{{ asset('img/logo-fge-svg.svg') }}" alt=""></a>
           {{--<p class="login-box-msg">Ingresa tus datos para iniciar sesión</p>--}}
         </div>   
@@ -60,15 +60,15 @@
         <div class="input-group">
           <span class="rounded"><i class="fa fa-key fa-lg " aria-hidden="true"></i></span>            
             <input id="password" type="password" name="password" class=" form-control rounded" placeholder="Contraseña">
-            
+        </div>
                 @if ($errors->has('password'))
-                   <span class="help-block">
+                   <span class="help-block" id="error2">
                      <strong>{{ $errors->first('password') }}</strong>
                    </span>
                 @endif
         </div>
          
-        </div>
+        
       
         {{-- /.col --}}
         <div class="col-md-12 ">

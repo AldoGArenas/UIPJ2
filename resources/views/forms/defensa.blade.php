@@ -6,7 +6,15 @@
 @endsection
 @section('contenido')
     {!! Form::open(['route' => 'store.defensa', 'method' => 'POST'])  !!}
-    {{ csrf_field() }}
+	{{ csrf_field() }}
+	<div class="card-header">
+			<div class="row">
+			<div class="col-md-12">
+			@include('forms.buttons')
+		</div>
+		</div>
+	</div>
+	
 	@include('forms.idcarpeta')
 	<div class="row no-gutters">
 		<div class="col-12">
@@ -15,7 +23,7 @@
 			</div>
 		</div>
 	</div>
-	@include('forms.buttons')
+	
 	{!! Form::close() !!}
 	<div class="box-body">
 		@include('tables.defensas')

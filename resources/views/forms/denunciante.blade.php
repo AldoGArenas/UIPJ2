@@ -8,17 +8,15 @@
 @section('contenido')
 	@include('forms.errores')
 	{!! Form::open(['route' => 'store.denunciante', 'method' => 'POST'])  !!}
+	{{ csrf_field() }}
 	<div class="card-header">
-		<div class="row">
-		@include('fields.tipo-persona')
-		<div class="col-md-10">
-		@include('forms.buttons')
+			<div class="row">
+			@include('fields.tipo-persona')
+			<div class="col-md-10">
+			@include('forms.buttons')
+		</div>
+		</div>
 	</div>
-	</div>
-</div>
-    {{ csrf_field() }}
-
-
   <div id="tabs">
 	<ul class="nav nav-tabs">
  		<li class="nav-item">
