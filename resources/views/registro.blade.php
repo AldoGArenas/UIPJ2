@@ -1,11 +1,11 @@
-@extends('template.main2')
+@extends('template.main')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/tempusdominus-bootstrap-4.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/chosen/chosen.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('plugins/select2/select2.css') }}">
 @endsection
-
+ 
 @section('content')
 <ul class="nav nav-tabs" id="myTab" role="tablist">
 	<li class="nav-item">

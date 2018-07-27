@@ -1,8 +1,8 @@
-<footer class="main-footer">
-        {{-- To the right --}}
-    <div class="pull-right hidden-xs">
-          Anything you want
-     </div>
-        {{-- Default to the left --}}
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+<footer class="main-footer bottom">
+	<!-- To the right -->
+	{{--<div class="float-right d-sm-none d-md-block">
+		Anything you want
+	</div>--}}
+	<!-- Default to the left -->
+	<strong>Copyright © 2018 Fiscalía General del Estado de Veracruz, DCIIT. |</strong>Avisos de Privacidad.
 </footer>

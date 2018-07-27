@@ -14,20 +14,11 @@
 Auth::routes();
 
 Route::get('/', function () {
-    return view('auth.login');
+    return redirect()->route('login');
 })->middleware('guest');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('admin', function () {
-    return view('admin_lte');
-});
-Route::get('main2', function () {
-    return view('template.main2');
-});
-/*Route::get('login', function () {
-    return view('auth.login2');
-})*/;
-//Route::get('register2', 'auth\RegisterController@showRegistrationForm');
+
 
 //Protección de rutas
 Route::middleware(['auth'])->group(function () {
@@ -37,6 +28,9 @@ Route::middleware(['auth'])->group(function () {
 
 	Route::get('carpeta/{idCarpeta}/agregar-denunciante', 'DenuncianteController@showForm')->name('new.denunciante');
 	Route::post('storedenunciante', 'DenuncianteController@storeDenunciante')->name('store.denunciante');
+
+	Route::get('carpeta/{idCarpeta}/agregar-testigo', 'TestigoController@showForm')->name('new.testigo');
+	Route::post('storetestigo', 'TestigoController@storeTestigo')->name('store.testigo');
 
 	Route::get('carpeta/{idCarpeta}/agregar-denunciado', 'DenunciadoController@showForm')->name('new.denunciado');
 	Route::post('storedenunciado', 'DenunciadoController@storeDenunciado')->name('store.denunciado');
@@ -70,6 +64,15 @@ Route::middleware(['auth'])->group(function () {
 		'as' => 'view.carpeta'
 	]);
 
+	Route::get('carpeta/{idCarpeta}/denunciante/{idDenunciante}/complemento', 'DenuncianteController@showComplement')->name('complement.denunciante');
+
+	Route::post('denunciante/storecomplemento', 'DenuncianteController@storeComplement')->name('store.complement1');
+
+	Route::get('carpeta/{idCarpeta}/denunciado/{idDenunciado}/complemento', 'DenunciadoController@showComplement')->name('complement.denunciado');
+
+	Route::post('denunciado/storecomplemento', 'DenunciadoController@storeComplement')->name('store.complement2');
+
+
 	Route::post('armarRfc', 'DenuncianteController@rfcMoral')->name('rfc.denunciante');
 	Route::post('armarRfcFIsico', 'DenuncianteController@rfcFisico')->name('rfcFisico.denunciante');
 
@@ -89,6 +92,7 @@ Route::middleware(['auth'])->group(function () {
   	Route::get('carpeta/agrupaciones1/{id}','RegistroController@getAgrupaciones1');
   	Route::get('carpeta/agrupaciones2/{id}','RegistroController@getAgrupaciones2');
     Route::get('persona/curp/{curp}','RegistroController@buscarCURP');
+    Route::get('contador','RegistroController@contador');
 
 	/*---------Rutas para generación de documentos-------------*/
 	Route::get('constancia-hechos/{idDenunciante}', [
@@ -112,7 +116,33 @@ Route::middleware(['auth'])->group(function () {
 	Route::get('libro-gobierno', 'LibroGobiernoController@index')->name('libro.gobierno');
 	Route::get('api/libro', 'LibroGobiernoController@apiLibro')->name('api.libro');
 	Route::get('api/rango', 'LibroGobiernoController@apiLibroRango')->name('api.rango');
+
+	/*---------Rutas para la bitácora-------------*/
+	Route::get('bitacora', 'BitacoraController@index')->name('bitacora');
+	Route::get('api/bitacora', 'BitacoraController@apiBitacora')->name('api.bitacora');
+
+
+  	/*---------Rutas para NOTALLLOWED ------------*/
+  	Route::get('/notAllowed',function(){
+        return view('forms.notAllowed');
+  	})->name('notAllowed');
+
+
+    /*-------------- RUTA PARA NARRACIONES---------------------*/
+    Route::get('narracion/{id}/ver','NarracionController@ver')->name('ver.narracion');
+    Route::get('narracion/{idCarpeta}/{idInvolucrado}/{tipoInvolucrado}', 'NarracionController@index')->name('narracion.index');
+    Route::post('narracion/create', 'NarracionController@store')->name('store.narracion');
+
+  	/*-------------- RUTA PARA CITATORIOS---------------------*/
+  	Route::get('agenda', 'CitatorioController@index')->name('agenda');
+    Route::get('citatorio/{idCarpeta}/{idCitado}/{tipoInvolucrado}', 'CitatorioController@create')->name('citatorio');
+    Route::post('citatorio/create', 'CitatorioController@store')->name('store.citatorio');
+    Route::get('citatorio/{id}/edit', 'CitatorioController@edit')->name('edit.citatorio');
+    Route::put('citatorio/update/{id}', 'CitatorioController@update')->name('update.citatorio');
 });
+
+
+
 
 
 /*

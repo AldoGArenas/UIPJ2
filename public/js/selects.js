@@ -301,7 +301,7 @@ $("#idAbogado").change(function(event){
 			$("#idInvolucrado").empty();
 			$("#idInvolucrado").append("<option value=''>Seleccione un involucrado</option>");
 			for(i=0; i<response.length; i++){
-				$("#idInvolucrado").append("<option value='"+response[i].id+"'> "+response[i].nombres+" "+response[i].primerAp+" "+response[i].segundoAp+"</option>");
+				$("#idInvolucrado").append("<option value='"+response[i].id+"'> "+response[i].nombre+"</option>");
 			}
 		});
 	}
@@ -391,6 +391,8 @@ $("#idAgrupacion1").change(function(event){
 	});
 }
 });
+
+//-----------------------
 $('form').sisyphus({
 		excludeFields: $( 'input[name=_token]' )
 });

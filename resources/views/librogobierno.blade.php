@@ -1,45 +1,41 @@
-@extends('template.main2')
+@extends('template.form')
 
-@section('title', 'Libro de Gobierno')
+@section('title', 'Libro de gobierno')
+@section('contenido')
 
-@section('css')
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/datatables.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/tempusdominus-bootstrap-4.min.css') }}">
-	
-@endsection
-@section ('cabinterna')
-<div class="row ">
-        <section class="content-header">
-                <h1>
-						Libro de gobierno
-                  {{--<small>Optional description</small>--}}
-                </h1>
-                {{--<ol class="breadcrumb">
-                  <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                  <li class="active">Here</li>
-                </ol>--}}
-        </section>
-</div>
-@endsection
 
-@section('content')
-<div class="box box-default "> 
-	<div class="box-body">  
-	<div class="row">
-    <div class="col-md-12">
-    <div class="card">
-    <div class="card-header"></div>
-    <div class="card-body boxone">
 
-	<div class="boxtwo" align="center">
-		<h6 align="center">Consultar Libro de Gobierno</h6>
-		{!! Form::open() !!}
+
+<div class="card-header">
+<div class="row">
+		<div class="col">
+			<div class="text-left">
+				{{--Aqui van radios, etc --}}
+			</div>
+		</div>
+		<div class="col">	
+			<div class="text-right">
+				<button type="button" class="btn btn-dark" id="consultar">Consultar</button>
+			</div>
+		</div>
+	</div>
+</div> 
+
+@include('forms.errores')
+<div class=" card-body boxone">
+	<div class="row no-gutters">
+		<div class="col-12">
+			<div class="boxtwo">			
+				<h6 align="center">Consultar libro de gobierno</h6>
+
+				{!! Form::open() !!}
 		<div class="form-group" align="center">
-			<div class="row">
-
-			<div class="col-5" align="center">
+			<div class="row" align="center">
+				<div class="col-6" align="center">
 					<div class="form-group">
-						{!! Form::label('fechaIni', 'De Fecha:', ['class' => 'col-form-label-sm']) !!}
+						{!! Form::label('fechaIni', 'De fecha:', ['class' => 'col-form-label-sm']) !!}
 						<div class="input-group date" id="fechaLibroIni" data-target-input="nearest">
 							{!! Form::text('fechaIni', null, ['class' => 'form-control form-control-sm datetimepicker-input', 'data-target' => '#fechaLibroIni', 'data-toggle' => 'datetimepicker', 'required', 'placeholder' => 'DD/MM/AAAA']) !!}
 							<div class="input-group-append" data-target="#fechaLibroIni" data-toggle="datetimepicker">
@@ -49,10 +45,9 @@
 					</div>
 				</div>
 
-
-			<div class="col-5" align="center" >
+				<div class="col-6" align="center" >
 					<div class="form-group">
-						{!! Form::label('fechaFin', 'A Fecha:', ['class' => 'col-form-label-sm']) !!}
+						{!! Form::label('fechaFin', 'A fecha:', ['class' => 'col-form-label-sm']) !!}
 						<div class="input-group date" id="fechaLibroFin" data-target-input="nearest">
 							{!! Form::text('fechaFin', null, ['class' => 'form-control form-control-sm datetimepicker-input', 'data-target' => '#fechaLibroFin', 'data-toggle' => 'datetimepicker', 'required', 'placeholder' => 'DD/MM/AAAA']) !!}
 							<div class="input-group-append" data-target="#fechaLibroFin" data-toggle="datetimepicker">
@@ -62,17 +57,16 @@
 					</div>
 				</div>
 
-
-				<div class="col-md-2">
+				<div class="col-2">
 					<div class="form-group">
 						<br>
-						<button type="button" class="btn btn-primary" id="consultar">Consultar</button>
+						
 					</div>
 				</div>
 			</div>
 		</div>
 		{!! Form::close() !!}
-		{{----}}
+
 		<div class="table">
 			<table id="libroTable" class="table table-bordered table-striped" width="100%">
 				<thead>
@@ -87,23 +81,7 @@
 				</thead>
 			</table>
 		</div>
-	</div>
-	<div class="boxtwo">
-		<div class="row">
-			<div class="col">
-				<div class="text-center">
-					<a href="{{ route('home') }}" class="btn btn-dark text-center">Volver atrás</a>
-				</div>
-			</div>
-		</div>
-	</div>
-    </div>
-    </div>
-    </div>
-	</div>
-	</div>
-</div>
-@endsection
+
 
 @section('scripts')
 <script src="{{ asset('js/datatables.min.js')}}" ></script>
@@ -133,7 +111,7 @@
 	
 	var table = $('#libroTable').DataTable({
 		language: {
-			"url": "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+			"url": "{{ asset('json/Spanish.json') }}"
 		},
 		ajax: "{{ route('api.libro') }}",
 		columns: [
@@ -168,6 +146,10 @@
         ]
 	});
 
+	setInterval( function () {
+	    table.ajax.reload( null, false );
+	}, 20000 );
+
 	$.ajaxSetup({
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}
     });
@@ -197,3 +179,11 @@
 </script>
 
 @endsection
+
+			</div>
+		</div>
+	</div>
+</div>
+
+@endsection
+

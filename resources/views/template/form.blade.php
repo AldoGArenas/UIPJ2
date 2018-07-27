@@ -1,33 +1,32 @@
-@extends('template.main2')
+@extends('template.main')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/tempusdominus-bootstrap-4.min.css') }}">
-@endsection
-@section ('cabinterna')
-<div class="row ">
-        <section class="content-header">            
-                <h1 class=""> @yield('title'){{--<small>Optional description</small>--}}</h1>                      
-                 <ol class="breadcrumb" id="superior" >
-                  <li data-toggle="tooltip"  data-placement="left" title="Regresar a carpeta"> @yield ('regresocarpeta') </li>                  
-                </ol>
-        </section>
-</div>
+        <link rel="stylesheet" href="{{ asset('plugins/fileinput/css/fileinput.min.css') }}">
 @endsection
 
 @section('content')
-<div class="box box-default "> 
-    <div class="box-body">     
-<div class="row ">
+<div class="row">
     <div class="col-md-12">
-        <div class="card ">
-            <div class="">
+        <div class="card">
                 @yield('contenido')
             </div>
         </div>
     </div>
+
+
+@isset($idCarpeta)
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title text-center">@yield('titulo-tabla')</h5>
+            </div>
+            @yield('tabla')
+        </div>
+    </div>
 </div>
-</div>
-</div> 
+@endif
 @endsection
 
 @section('scripts')
@@ -39,11 +38,16 @@
     <script src="{{ asset('js/moment.min.js') }}"></script>
     <script src="{{ asset('js/es.js') }}"></script>
     <script src="{{ asset('js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ asset('plugins/fileinput/js/fileinput.min.js')}}" ></script>
+    <script src="{{ asset('plugins/fileinput/themes/fa/theme.min.js')}}" ></script>
+    <script src="{{ asset('plugins/fileinput/js/locales/es.js')}}" ></script>
     <script src="{{ asset('js/sisyphus.js')}}" ></script>
     <script src="{{ asset('js/validations.js') }}"></script>
     <script src="{{ asset('js/selects.js') }}"></script>
-    <script src="{{ asset('js/scripts.js') }}"></script>
-    <script src="{{ asset('js/popper.min.js')}}" ></script>
+    <script src="{{ asset('js/scripts.js') }}"></script> 
+
+
+
     <script>
         //$('#narracionIph').restrictLength($('#contaNarr'));
         //$('#descripcionHechos').restrictLength($('#contaDesc'));
@@ -52,7 +56,7 @@
                 $(this).siblings('select').select2('open');
             }
         });
-           
+
     </script>
     <script src="{{ asset('js/curp.js') }}"></script>
     @include('fields.rfcMoral');

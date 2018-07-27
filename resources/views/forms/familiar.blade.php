@@ -1,32 +1,40 @@
 @extends('template.form')
 
 @section('title', 'Agregar Familiar')
-@section ('regresocarpeta')
-<a href="{{ route('view.carpeta', $idCarpeta) }}"  class="btn btn-primary"><i class="fa fa-folder-open"></i></a>
-@endsection
 
 @section('contenido')
-	@include('forms.errores')
-    {!! Form::open(['route' => 'store.familiar', 'method' => 'POST'])  !!}
-	{{ csrf_field() }}
-	<div class="card-header">
-			<div class="row">
-		<div class="col-md-12">
-			@include('forms.buttons')
+{!! Form::open(['route' => 'store.familiar', 'method' => 'POST'])  !!}
+{{ csrf_field() }}
+<div class="card-header">
+		<div class="row">
+				<div class="col">
+					<div class="text-left">
+							{{--Aqui van radios, etc --}}
+						</div>
+				</div>
+				<div class="col">	
+					<div class="text-right">
+							@include('forms.buttons')
+					</div>
+				</div>
 		</div>
-	</div>	
-	</div>
+</div>
+@include('forms.errores')
+<div class=" card-body boxone">
 	<div class="row no-gutters">
 		<div class="col-12">
-			<div class="box-body">
+			<div class="boxtwo">
 				<h6>Datos del familiar (Denunciante/Denunciado)</h6>
 				@include('fields.familiar')
 			</div>
 		</div>
 	</div>
-	
+</div>
 	{!! Form::close() !!}
-	<div class="box-body">
+@endsection
+@section('tabla')
+	<div class="boxtwo">
+		@section('titulo-tabla', 'Familiares registrados')
 		@include('tables.familiares')
 	</div>
 @endsection

@@ -287,26 +287,35 @@
 
 }(this));
 $("#nombres").focusout(function() {
+	toastr.clear();
 	obtenerCURP();
+	obtenerRFCFISICA();
 });
 $("#primerAp").focusout(function() {
+	toastr.clear();
 	obtenerCURP();
+	obtenerRFCFISICA();
 });
 $("#segundoAp").focusout(function() {
+	toastr.clear();
 	obtenerCURP();
+	obtenerRFCFISICA();
 });
 $("#sexo").change(function() {
+	toastr.clear();
 	obtenerCURP();
 });
 $("#fechaNacimiento").focusout(function() {
+	toastr.clear();
 	obtenerCURP();
+	obtenerRFCFISICA();
 });
 $("#idEstadoOrigen").change(function() {
+	toastr.clear();
 	obtenerCURP();
 });
 
 function obtenerCURP() {
-
 	nombre = $("#nombres").val().toUpperCase();
 	apellidoPaterno = $("#primerAp").val().toUpperCase();
 	apellidoMaterno = $("#segundoAp").val().toUpperCase();
@@ -316,6 +325,8 @@ function obtenerCURP() {
 		sexo = "H";
 	} else if(sexo == 'MUJER'){
 		sexo = "M";
+	}else{
+		sexo="";
 	}
 	if(nombre!=""&& apellidoPaterno!=""&&sexo!=""){
 		var abreviacion = ["AS", "BC", "BS", "CC", "CS", "CH", "CL", "CM", "CX", "DF", "DG", "GT", "GR", "HG", "JC", "MC", "MN", "MS", "NT", "NL", "OC", "PL", "QT", "QR", "SP", "SL", "SR", "TC", "TS", "TL", "VZ", "YN", "ZS"];
@@ -332,10 +343,47 @@ function obtenerCURP() {
 			estado: estado,
 			fecha_nacimiento: [dia, mes, año]
 		});
-		if($("#curp").val() != curp){
+		curp2=curp;
+		if($("#curp").val() == ""){
 			$("#curp").val(curp);
 			$('#curp').trigger('change');
-			toastr.info('Se ha modificado el CURP', '¡Atención!');
+			toastr.success('Se ha modificado el CURP', '¡Atención!');
+		}else{
+			if($("#curp").val() != curp2){
+				toastr.options ={
+					"closeButton": true,
+					"newestOnTop": true,
+					"preventDuplicates": true,
+					"timeOut": 0,
+  					"extendedTimeOut": 10000,
+  					"positionClass": "toast-bottom-right",
+				}
+				toastr.info('Se ha detectado un cambio ¿Desea actualizar el CURP?<br /><button type="button" class="btn btn-light" onclick="actualizarCurp(\''+curp2+'\')">Sí</button>');
+			}
+			
 		}
 	}
+}
+
+function actualizarCurp(curp){
+	$("#curp").val(curp);
+	$('#curp').trigger('change');
+	toastr.options = {
+		"closeButton": true,
+		"debug": false,
+		"newestOnTop": true,
+		"progressBar": true,
+		"positionClass": "toast-bottom-right",
+		"preventDuplicates": true,
+		"onclick": null,
+		"showDuration": "300",
+		"hideDuration": "1000",
+		"timeOut": "3000",
+		"extendedTimeOut": "1000",
+		"showEasing": "swing",
+		"hideEasing": "linear",
+		"showMethod": "fadeIn",
+		"hideMethod": "fadeOut"
+	}
+	toastr.success('Se ha modificado el CURP', '¡Atención!');
 }

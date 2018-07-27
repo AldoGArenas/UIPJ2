@@ -1,6 +1,6 @@
 <header>
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-		<a class="navbar-brand" href="{{ url('/home') }}"><img src="" alt="" class="logofge"></a>
+		<a class="navbar-brand" href="{{ url('/home') }}"><img src="{{ asset('img/logofge2.png') }}" alt="" class="logofge"></a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
 		</button>
@@ -13,6 +13,9 @@
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{{ route('libro.gobierno') }}">Libro de gobierno</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ route('bitacora') }}">Bitácora</a>
 					</li>
 					{{--<li class="nav-item">
 						<a class="nav-link" href="{{ url('/registrar-carpeta') }}">Registrar nueva Carpeta</a>
@@ -39,7 +42,7 @@
 				@else
 					<li class="nav-item dropdown">
 						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-							{{ Auth::user()->nombres." ".Auth::user()->primerAp." ".Auth::user()->segundoAp }} <span class="caret"></span>
+							{{ Auth::user()->nombres." ".Auth::user()->apellidos }} <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="#">Cambiar contraseña</a></li>

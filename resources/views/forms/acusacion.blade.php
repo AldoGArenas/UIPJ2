@@ -1,28 +1,54 @@
 @extends('template.form')
 
-@section('title', 'Agregar Acusación')
-@section ('regresocarpeta')
-<a href="{{ route('view.carpeta', $idCarpeta) }}"  class="btn btn-primary"><i class="fa fa-folder-open"></i></a>
-@endsection
+@section('title', 'Agregar acusación')
+
 @section('contenido')
-    {!! Form::open(['route' => 'store.acusacion', 'method' => 'POST'])  !!}
-	{{ csrf_field() }}
-	<div class="card-header">
-			<div class="row">
-			<div class="col-md-12">
-			@include('forms.buttons')
+
+{!! Form::open(['route' => 'store.acusacion', 'method' => 'POST'])  !!}
+{{ csrf_field() }}
+
+<div class="card-header">
+<div class="row">
+		<div class="col">
+			<div class="text-left">
+				{{--Aqui van radios, etc --}}
+			</div>
 		</div>
-		</div>
-	</div>
-	<div class="row no-gutters">
-		<div class="col-12">
-			<div class="box-body">
-				@include('fields.acusacion')
+		<div class="col">	
+			<div class="text-right">
+				@include('forms.buttons') 
+			
+				 
+			
 			</div>
 		</div>
 	</div>
-	{!! Form::close() !!}
-	<div class="box-body">
+
+</div>
+
+@include('forms.errores')  
+
+	<div class="row no-gutters">
+		<div class="col-12">
+			<div class="boxtwo">
+				<h6>Datos de la acusación</h6>
+				
+					@if(!empty($idCarpeta))
+						{!! Form::hidden('idCarpeta', $idCarpeta) !!}
+					@endif
+					
+					@include('fields.acusacion')
+			
+			</div>
+		</div>
+	</div>
+
+	
+{!! Form::close() !!}
+@endsection
+@section('tabla')
+	<div class="boxtwo">
+		@section('titulo-tabla', 'Acusaciones registradas')
 		@include('tables.acusaciones')
 	</div>
 @endsection
