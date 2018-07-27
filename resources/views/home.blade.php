@@ -40,6 +40,9 @@
                         </tbody>
                     </table>
                 </div>
+                
+                {!! Form::button('Mamalon', ['id'=>'mamalon','class'=>'boton-mamalon']) !!}
+                
 
 
                 <div class="text-center">

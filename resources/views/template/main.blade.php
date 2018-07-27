@@ -22,11 +22,13 @@
 	<link rel="stylesheet" href="{{asset ('css/sweetalert.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/select2/select2.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
+	<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" href="{{ asset('css/cssfonts.css') }}">
     <link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/estilos.css') }}">	
 	<link rel="stylesheet" href="{{ asset('css/theme-jquery-validation.min.css') }}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	
     @yield('css')
 </head>
 
