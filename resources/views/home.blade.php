@@ -42,7 +42,12 @@
                 </div>
                 
                 {!! Form::button('Mamalon', ['id'=>'mamalon','class'=>'boton-mamalon']) !!}
-                
+                <select id="selector" class="col-4">
+                    <option value="red">red</option>
+                    <option value="orange">orange</option>
+                    <option value="green">green</option>
+                    <option value="blue">blue</option>
+                 </select>                
 
 
                 <div class="text-center">
@@ -61,4 +66,16 @@
     <script src="{{ asset('js/validations.js') }}"></script>
     <script src="{{ asset('js/selects.js') }}"></script>
     <script src="{{ asset('js/scripts.js') }}"></script>
+     <script> $(document).ready(function(){
+         $('#selector').change(function(){
+         var chingon = $(this).val()
+         console.log(chingon);
+         less.modifyVars({
+             '@nice-blue':$(this).val()
+         });
+     });
+    });</script>
 @endsection
+@push ('docready-js')
+
+@endpush

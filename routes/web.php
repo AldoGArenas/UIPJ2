@@ -17,7 +17,13 @@ Route::get('/', function () {
     return redirect()->route('login');
 })->middleware('guest');
 
+Route::get('/color-admin',function(){
+	return view('color-admin.color-panel');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('assets/css/{filename}.css', 'AssetController@getCSS');
+
 
 
 //Protección de rutas

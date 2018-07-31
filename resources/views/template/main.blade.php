@@ -22,12 +22,16 @@
 	<link rel="stylesheet" href="{{asset ('css/sweetalert.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/select2/select2.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
-	<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"/>
+	{{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"/> --}}
 	<link rel="stylesheet" href="{{ asset('css/cssfonts.css') }}">
     <link rel="stylesheet" href="{{ asset('css/pagination.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/estilos.css') }}">	
 	<link rel="stylesheet" href="{{ asset('css/theme-jquery-validation.min.css') }}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet/less" type="text/css" href="{{ asset('css/styles.less') }}" />
+	<script>less = { env: 'development'};</script>
+	<script src="less.js"></script>
+	<script>less.watch();</script>
 	
     @yield('css')
 </head>
@@ -97,6 +101,7 @@
 	<script src="{{ asset('js/toastr.min.js')}}" ></script>
 	<script src="{{ asset('js/jquery.form-validator.min.js')}}" ></script>
 	<script src="{{ asset('js/validations.js')}}" ></script>
+	<script src="{{ asset('js/less.js')}}" ></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 	<!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
@@ -192,7 +197,7 @@
 	    });
 			$.validate({
 				 lang : 'es'
-			});
+			});			
 	</script>
 
 	@yield('scripts')
